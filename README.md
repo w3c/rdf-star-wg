@@ -11,9 +11,9 @@ For more targeted discussion on one of the deliverables, use [the corresponding 
 
 ## Working Group documents
 
-In addition to the related repositories referenced as deliverables above. Contributors should reference the [Editor's Guide](https://github.com/w3c/rdf-star-wg/wiki/Editor's-guide) for general practices in editing specifications, submitting Pull Requests and generally working with ReSpec.
+In addition to the related repositories referenced as deliverables above. Contributors should reference the [Editor's Guide](https://github.com/w3c/rdf-star-wg/wiki/Editor's-guide) for general practices in editing specifications, submitting Pull Requests, and generally working with [ReSpec](https://respec.org/docs/).
 
-Note that per the [W3C Patent Policy](https://www.w3.org/Consortium/Patent-Policy-20200915/) the group is only able to accept non-trivial contributions from Working Group members. However, comments and minor update suggestions from others are welcome.
+Note that per the [W3C Patent Policy](https://www.w3.org/Consortium/Patent-Policy-20200915/), the group is only able to accept non-trivial contributions from Working Group members. However, comments and minor update suggestions from others are welcome.
 
 Additional notes that are pertinent to Working Group discussions may be found in the [wiki](https://github.com/w3c/rdf-star-wg/wiki) as well as the following:
 
