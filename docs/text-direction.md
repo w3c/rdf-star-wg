@@ -98,3 +98,10 @@ A related solution would update the grammars to allow _both_ a language tag and 
 ] .
 ```
 
+## History
+
+For history on this, see the following:
+
+* https://github.com/w3c/json-ld-syntax/issues/11
+* https://github.com/json-ld/json-ld.org/issues/583
+
