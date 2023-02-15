@@ -98,6 +98,37 @@ A related solution would update the grammars to allow _both_ a language tag and 
 ] .
 ```
 
+## Extend the Abstract Syntax
+
+Fully integrating the concept of text direction in RDF suggests adding it to the abstract syntax, and updating the relevant concrete syntaxes accordingly. This would allow a fourth element to be added to the definition of an [RDF literal](https://w3c.github.io/rdf-concepts/spec/#dfn-rdf-literal), in addition to `lexical form`, `datatype IRI`, and `language tag`:
+
+> A literal in an [RDF graph](https://w3c.github.io/rdf-concepts/spec/#dfn-rdf-graph) consists of two ***to four*** elements:
+> * ...
+> * ***if and only if the [datatype IRI](https://w3c.github.io/rdf-concepts/spec/#dfn-datatype-iri) is `http://www.w3.org/1999/02/22-rdf-syntax-ns#langString`, `text direction`, MUST BE empty or one or `ltr` or `rtl`***.
+
+> A literal is a `language-tagged string` if the third element is present. Lexical representations of language tags MAY be converted to lower case. The value space of language tags is always in lower case. ***The fourth element, `text direction`, MUST NOT be present unless the `language tag` element is present. The value space of `text direction` is either empty, or one of `ltr` or `rtl`.
+
+> The `literal value` associated with a [literal](https://w3c.github.io/rdf-concepts/spec/#dfn-rdf-literal) is:
+> 1. If the literal is a [language-tagged string](https://w3c.github.io/rdf-concepts/spec/#dfn-language-tagged-string), then the literal value is a tuple consisting of its [lexical form](https://w3c.github.io/rdf-concepts/spec/#dfn-lexical-form) and its [language tag](https://w3c.github.io/rdf-concepts/spec/#dfn-language-tag), and its `text direction`, in that order.
+> 2. ...
+
+> **Literal term equality**: Two literals are term-equal (the same RDF literal) if and only if the two [lexical forms](https://w3c.github.io/rdf-concepts/spec/#dfn-lexical-form), the two [datatype IRIs](https://w3c.github.io/rdf-concepts/spec/#dfn-datatype-iri), the two [language tags](https://w3c.github.io/rdf-concepts/spec/#dfn-language-tag) (if any), ***and the two `text directions`*** compare equal, character by character. Thus, two literals can have the same value without being the same RDF term.
+
+Plus, a paragraph expounding the the purpose of `text direction`.
+
+Concrete syntaxes, such as SPARQL and Turtle would change the definition of an `RDFLiteral`
+
+> `[128s] RDFLiteral ::= String (LANGTAG ("^" ('rtl'|'ltr'))? | '^^ iri)?
+
+Thus, in Turtle, a text direction might be represented as follows:
+
+```turtle
+[
+  ex:title "HTML و CSS: تصميم و إنشاء مواقع الويب"@ar-EG^rtl;
+  ex:publisher "مكتبة"@ar-EG^rtl
+] .
+```
+
 ## History
 
 For history on this, see the following:
