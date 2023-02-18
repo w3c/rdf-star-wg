@@ -10,7 +10,7 @@ JSON-LD added support by introducing the [`@direction` keyword](https://www.w3.o
 
 # Potential solutions
 
-Generally, the `i18n` namespace solution seems to have had the most uptake.
+Of the first two approachs, which are valid in RDF 1.1, the `i18n` namespace solution seems to have had the most uptake.
 
 ## The `i18n` namespace
 
