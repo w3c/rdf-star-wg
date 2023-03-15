@@ -1,9 +1,13 @@
 
 # RDF-star Working Group
 
-This is the main repository of the [RDF-star working group](https://www.w3.org/groups/wg/rdf-star/).
-
-Minutes of the working group meetings are available at https://www.w3.org/services/meeting-minutes?channel=rdf-star&num=2000 .
+This is the main repository of the [RDF-star working group](https://www.w3.org/groups/wg/rdf-star/). See:
+- [Participants](https://www.w3.org/groups/wg/rdf-star/participants),
+- [Charter](https://www.w3.org/2022/08/rdf-star-wg-charter/)
+- [Tools](https://www.w3.org/groups/wg/rdf-star/tools) (mailing lists and repositories)
+- [Minutes of working group meetings](https://www.w3.org/services/meeting-minutes?channel=rdf-star&num=2000)
+- [Calendar](https://www.w3.org/groups/wg/rdf-star/calendar): regular weekly meetings, every Thursday, at 12:00 America/New York (18:00 Europe/Kiev), duration 0:55: https://www.w3.org/groups/wg/rdf-star/calendar
+- [IPR policy](https://www.w3.org/groups/wg/rdf-star/ipr)
 
 For general issues about RDF-star and the RDF/SPARQL 1.2 family of specifications,
 you can [raise an issue](https://github.com/w3c/rdf-star-wg/issues) on this repository,
