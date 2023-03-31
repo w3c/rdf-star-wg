@@ -7,7 +7,6 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 Das, Souripriya  
 Taelman, Ruben  
 Thibodeau, Ted  
-Williams, Gregory  
 Zimmermann, Antoine  
 
 ## Already scribed
@@ -19,8 +18,9 @@ Gshwend, Adrian 3
 Kellogg, Gregg 4  
 Seaborne, Andy 5  
 Champin, Pierre-Antoine 8  
-Alexiev, Vladimir
+Alexiev, Vladimir  
 Arndt, Dörthe  
+Williams, Gregory  
 
 ## Exempt
 Ceres, Rémi  
