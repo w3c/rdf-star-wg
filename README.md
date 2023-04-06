@@ -24,3 +24,19 @@ Note that per the [W3C Patent Policy](https://www.w3.org/Consortium/Patent-Polic
 Additional notes that are pertinent to Working Group discussions may be found in the [wiki](https://github.com/w3c/rdf-star-wg/wiki) as well as the following:
 
 * [Text Direction considerations](docs/text-direction.md)
+
+## Approximate WG Process Flow
+
+1. Create [Issue](https://github.com/w3c/rdf-star-wg/issues/) asking question, pointing to problem, etc., with title and initial post as neutral as possible regarding (direction of) resolution. Raise general concerns on [RDF-star WG repo](https://github.com/w3c/rdf-star-wg/); raise doc-specific concerns on specific [relevant repo(s)](https://www.w3.org/groups/wg/rdf-star/tools).
+
+1. Discuss in [Issue](https://github.com/w3c/rdf-star-wg/issues/) and/or on [mailing list](https://lists.w3.org/Archives/Public/public-rdf-star-wg/) and/or in [telecons](https://www.w3.org/groups/wg/rdf-star/calendar)
+
+1. Upon general consensus of (direction of) resolution, create [Pull Request](https://github.com/w3c/rdf-star-wg/pulls) with specifics
+
+1. Seek reviews of PR
+
+1. Massage content of PR until generally acceptable
+
+1. Merge PR 
+
+1. Repeat as needed
