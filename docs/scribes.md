@@ -11,7 +11,7 @@ Lassila, Ora 2
 Hartig, Olaf  
 Haudebourg, Timothée  
 Patel-Schneider, Peter 3  
-Gshwend, Adrian 3  
+Gschwend, Adrian 3  
 Kellogg, Gregg 4  
 Seaborne, Andy 5  
 Champin, Pierre-Antoine 8  
