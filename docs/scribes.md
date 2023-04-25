@@ -10,7 +10,7 @@ Hartig, Olaf (regrets for 2023-04-27 and 2023-05-04)
 Haudebourg, Timothée  
 Alexiev, Vladimir  
 Arndt, Dörthe  
-Williams, Gregory 
+Williams, Gregory  
 Taelman, Ruben  
 Thibodeau, Ted  
 Zimmermann, Antoine  
