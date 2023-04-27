@@ -3,180 +3,180 @@
   "name": "a11y-needs-resolution",
   "color": "ea7472",
   "description": "Issue the Accessibility Group has raised and looks for a response on.",
-  "debug": null
+  "default": false
 },
 {
   "name": "a11y-tracker",
   "color": "ea7472",
   "description": "Group bringing to attention of a11y, or tracked by the a11y Group but not needing response.",
-  "debug": null
+  "default": false
 },
 {
   "name": "action",
   "color": "b60205",
   "description": "Actions are typically assigned during calls by ghurlbot.",
-  "debug": null
+  "default": false
 },
 {
   "name": "best practice",
   "color": "92ef9b",
   "description": "",
-  "debug": null
+  "default": false
 },
 {
   "name": "discuss-f2f",
   "color": "ac89dd",
   "description": "Proposed for discussion during the next face-to-face meeting",
-  "debug": null
+  "default": false
 },
 {
   "name": "Editorial",
   "color": "ff0000",
   "description": "Errata management: this erratum is editorial",
-  "debug": null
+  "default": false
 },
 {
   "name": "Errata",
   "color": "ff0000",
   "description": "Errata management: confirmed erratum",
-  "debug": null
+  "default": false
 },
 {
   "name": "ErratumRaised",
   "color": "ff0000",
   "description": "Errata management: proposed erratum",
-  "debug": null
+  "default": false
 },
 {
   "name": "i18n-needs-resolution",
   "color": "F9C9FF",
   "description": "Issue the Internationalization Group has raised and looks for a response on.",
-  "debug": null
+  "default": false
 },
 {
   "name": "i18n-tracker",
   "color": "F9C9FF",
   "description": "Group bringing to attention of Internationalization, or tracked by i18n but not needing response.",
-  "debug": null
+  "default": false
 },
 {
   "name": "ms:CR",
   "color": "e4fca9",
   "description": "Milestone: Candidate Recommendation",
-  "debug": null
+  "default": false
 },
 {
   "name": "ms:FPWD",
   "color": "fc83d0",
   "description": "Milestone: First Public Worging Draft",
-  "debug": null
+  "default": false
 },
 {
   "name": "ms:future-work",
   "color": "40d136",
   "description": "Defer this issue until a future version of the specification",
-  "debug": null
+  "default": false
 },
 {
   "name": "ms:PR",
   "color": "435ead",
   "description": "Milestone: Proposed Recommendation",
-  "debug": null
+  "default": false
 },
 {
   "name": "ms:REC",
   "color": "7af4c9",
   "description": "Milestone: Recommendation",
-  "debug": null
+  "default": false
 },
 {
   "name": "needs discussion",
   "color": "c5def5",
   "description": "Proposed for discussion in an upcoming meeting",
-  "debug": null
+  "default": false
 },
 {
   "name": "privacy-needs-resolution",
   "color": "d4af37",
   "description": "Issue the Privacy Group has raised and looks for a response on.",
-  "debug": null
+  "default": false
 },
 {
   "name": "privacy-tracker",
   "color": "d4af37",
   "description": "Group bringing to attention of Privacy, or tracked by the Privacy Group but not needing response.",
-  "debug": null
+  "default": false
 },
 {
   "name": "propose closing",
   "color": "bf5315",
   "description": "Proposed for closing",
-  "debug": null
+  "default": false
 },
 {
   "name": "satisfied",
   "color": "4be23b",
   "description": "Requirement Satisfied",
-  "debug": null
+  "default": false
 },
 {
   "name": "security-needs-resolution",
   "color": "ffff00",
   "description": "Issue the security Group has raised and looks for a response on.",
-  "debug": null
+  "default": false
 },
 {
   "name": "security-tracker",
   "color": "ffff00",
   "description": "Group bringing to attention of security, or tracked by the security Group but not needing response.",
-  "debug": null
+  "default": false
 },
 {
   "name": "spec:bug",
   "color": "ba39ce",
   "description": "Bug in the specification",
-  "debug": null
+  "default": false
 },
 {
   "name": "spec:duplicate",
   "color": "e0082c",
   "description": "Duplicate issue related to the specification",
-  "debug": null
+  "default": false
 },
 {
   "name": "spec:editorial",
   "color": "58820a",
   "description": "Minor issue or proposed change in the specification (markup, typo, informative text)",
-  "debug": null
+  "default": false
 },
 {
   "name": "spec:enhancement",
   "color": "c11537",
   "description": "Issue or proposed change to enhance the spec without changing the normative content substantively",
-  "debug": null
+  "default": false
 },
 {
   "name": "spec:help wanted",
   "color": "bd1dd6",
   "description": "Issue on the specification for which help is requested",
-  "debug": null
+  "default": false
 },
 {
   "name": "spec:invalid",
   "color": "25a873",
   "description": "",
-  "debug": null
+  "default": false
 },
 {
   "name": "spec:substantive",
   "color": "cff9a4",
   "description": "Issue or proposed change in the spec that changes its normative content",
-  "debug": null
+  "default": false
 },
 {
   "name": "spec:wontfix",
   "color": "2bafa2",
   "description": "Issue on the specification that Working Group will not address",
-  "debug": null
+  "default": false
 }
 ]
