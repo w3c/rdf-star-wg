@@ -6,20 +6,20 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 
 (reverse-engineered back to January 2023)
 
-Seaborne, Andy
-Patel-Schneider, Peter
-Champin, Pierre-Antoine 
-Gschwend, Adrian
-Pellissier Tanon, Thomas
-Alexiev, Vladimir  
-Williams, Gregory
-Taelman, Ruben
-Thibodeau, Ted  
-Zimmermann, Antoine 
-Kellogg, Gregg
-Haudebourg, Timothée  
-Arndt, Dörthe  
-Hartig, Olaf
+Seaborne, Andy   
+Patel-Schneider, Peter   
+Champin, Pierre-Antoine   
+Gschwend, Adrian   
+Pellissier Tanon, Thomas   
+Alexiev, Vladimir   
+Williams, Gregory   
+Taelman, Ruben   
+Thibodeau, Ted   
+Zimmermann, Antoine   
+Kellogg, Gregg   
+Haudebourg, Timothée   
+Arndt, Dörthe    
+Hartig, Olaf   
 
 
 ## Already scribed
