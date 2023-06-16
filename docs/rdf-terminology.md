@@ -137,9 +137,8 @@
 
 ## New terms:
 
-* [Opaque semantics] – Any semantics for quoted triples where the syntactic form of the arguments to triples is important.  See [docs/semantics.md] for more information.
+* [Opaque semantics](/docs/semantics.md#opaque-semantics) – Any semantics for quoted triples where the syntactic form of the arguments to quoted triples is important.
 
-* [Semi-opaque (semi-transparent semantics] – Any semantics for quoted triples where the syntactic form of the arguments to triples is important, except that only the meaning of blank nodes is important.  See [docs/semantics.md] for more information.
+* [Semi-transparent semantics](/docs/semantics.md#semi-transparent-semantics) – Any semantics for quoted triples where the syntactic form of some, but not all, kinds of arguments to quoted triples is important _usually excepting blank nodes so that only their meaning is important_.
 
-* [Transparent semantics] – Any semantics for quoted triples where only the meaning of the arguments to triples is important.  See [docs/semantics.md] for more information.
->>>>>>> 52aaa18 (add document on semantics options and add options to terminology document)
+* [Transparent semantics](/docs/semantics.md#transparent-semantics) – Any semantics for quoted triples where only the meaning of the arguments to quoted triples is important.

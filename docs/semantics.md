@@ -63,9 +63,9 @@ or
 <<_:a :c "4"^^xsd:int >> :d :e .
 ```
 
-## Semi-opaque (Semi-transparent) Semantics
+## Semi-transparent Semantics
 
-In the semi-opaque (semi-transparent) semantics
+In the semi-transparent (a.k.a. semi-opaque) semantics
 ```
 :b owl:sameAs :c .
 <<_:a :b "4"^^xsd:int >> :d :e .
