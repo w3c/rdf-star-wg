@@ -8,81 +8,81 @@ Note that, although we use the Turtle syntax for convenience, we interpret it in
 
 In RDF (extended to include `owl:sameAs` as equality to provide a way of requiring that two different IRIs mean the same thing)
 ```
-:b owl:sameAs :c .
-_:a :b "4"^^xsd:int .
+:b                            owl:sameAs :c .
+_:a                           :b         "4"^^xsd:int .
 ```
 entails
 ```
-_:f :b "4"^^xsd:int .
+_:f                           :b         "4"^^xsd:int .
 ```
 and 
 ```
-_:a :b "4"^^xsd:integer .
+_:a                           :b         "4"^^xsd:integer .
 ```
 and 
 ```
-_:a :c "4"^^xsd:integer .
+_:a                           :c         "4"^^xsd:integer .
 ```
 
 
 ## Transparent Semantics
 
-In the transparent semantics
+In the _transparent_ semantics
 ```
-:b owl:sameAs :c .
-<< _:a :b "4"^^xsd:int >> :d :e .
+:b                            owl:sameAs :c .
+<< _:a :b "4"^^xsd:int     >> :d         :e .
 ```
 entails
 ```
-<< _:f :b "4"^^xsd:int >> :d :e .
+<< _:f :b "4"^^xsd:int     >> :d         :e .
 ```
 and 
 ```
-<< _:a :b "4"^^xsd:integer >> :d :e .
+<< _:a :b "4"^^xsd:integer >> :d         :e .
 ```
 and
 ```
-<< _:a :c "4"^^xsd:int >> :d :e .
+<< _:a :c "4"^^xsd:int     >> :d         :e .
 ```
 
 ## Opaque Semantics
 
-In the opaque semantics
+In the _opaque_ semantics
 ```
 :b owl:sameAs :c .
-<< _:a :b "4"^^xsd:int >> :d :e .
+<< _:a :b "4"^^xsd:int     >> :d         :e .
 ```
 does not entail
 ```
-<< _:f :b "4"^^xsd:int >> :d :e .
+<< _:f :b "4"^^xsd:int     >> :d         :e .
 ```
 or 
 ```
-<< _:a :b "4"^^xsd:integer >> :d :e .
+<< _:a :b "4"^^xsd:integer >> :d         :e .
 ```
 or
 ```
-<< _:a :c "4"^^xsd:int >> :d :e .
+<< _:a :c "4"^^xsd:int     >> :d         :e .
 ```
 
 ## Semi-transparent Semantics
 
-In the semi-transparent (a.k.a. semi-opaque) semantics, as proposed in [the RDF-star final community group report](https://www.w3.org/2021/12/rdf-star.html)
+In the _semi-transparent_ (also known as _semi-opaque_) semantics, as proposed in [the RDF-star final community group report](https://www.w3.org/2021/12/rdf-star.html)
 ```
 :b owl:sameAs :c .
-<< _:a :b "4"^^xsd:int >> :d :e .
+<< _:a :b "4"^^xsd:int     >> :d         :e .
 ```
 does entail
 ```
-<< _:f :b "4"^^xsd:int >> :d :e .
+<< _:f :b "4"^^xsd:int     >> :d         :e .
 ```
 but does not entail
 ```
-<< _:a :b "4"^^xsd:integer >> :d :e .
+<< _:a :b "4"^^xsd:integer >> :d         :e .
 ```
 or
 ```
-<< _:a :c "4"^^xsd:int >> :d :e .
+<< _:a :c "4"^^xsd:int     >> :d         :e .
 ```
 
 One could also create other semi-opaque semantics where either IRIs or literals were transparent.
