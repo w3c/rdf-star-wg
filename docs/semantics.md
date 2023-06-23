@@ -4,7 +4,7 @@ There have been several different semantics proposals for quoted triples, some w
 
 The difference between the semantics can be seen in the following examples.
 
-In RDF (extended to include owl:sameAs as equality to provide a way of requiring that two different IRIs mean the same thing)
+In RDF (extended to include `owl:sameAs` as equality to provide a way of requiring that two different IRIs mean the same thing)
 ```
 :b owl:sameAs :c .
 _:a :b "4"^^xsd:int .
