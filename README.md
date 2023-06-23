@@ -6,7 +6,7 @@ This is the main repository of the [RDF-star working group](https://www.w3.org/g
 - [Charter](https://www.w3.org/2022/08/rdf-star-wg-charter/)
 - [Tools](https://www.w3.org/groups/wg/rdf-star/tools) (mailing lists and repositories)
 - [Minutes of working group meetings](https://www.w3.org/services/meeting-minutes?channel=rdf-star&num=2000)
-- [Calendar](https://www.w3.org/groups/wg/rdf-star/calendar): regular weekly meetings, every Thursday, at 12:00 America/New York (18:00 Europe/Kiev), duration 0:55: https://www.w3.org/groups/wg/rdf-star/calendar
+- [Calendar](https://www.w3.org/groups/wg/rdf-star/calendar): regular weekly meetings, every Thursday, at [12:00 ET (America/New York)](https://www.timeanddate.com/worldclock/full.html), duration 0:55
 - [IPR policy](https://www.w3.org/groups/wg/rdf-star/ipr)
 
 For general issues about RDF-star and the RDF/SPARQL 1.2 family of specifications,
