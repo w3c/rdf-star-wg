@@ -90,7 +90,7 @@ or
 << _:a :c "4"^^xsd:int     >> :d         :e .
 ```
 
-In this semantics the IRI `:b` inside the quoted triple denotes (i.e. refers to, means) something in the real world just like it does in standard/un-quoted RDF triples. As per the `owl:sameAs` statement that meaning can also be refered to by `:c`. However, this semantics aims to faithfully record that the IRI `:b` was used to refer to that meaning and therefore doesn't support entailments that e.g. entail the usage of `:c` from the usage of of `:b` although they mean the same thing.
+In this semantics, the IRI `:b` inside the quoted triple denotes (i.e., refers to, or means) something in the real world just like it does in "standard", un-quoted RDF triples. According to the `owl:sameAs` statement, that meaning can also be referred to by `:c`. However, this semantics aims to faithfully record that the IRI `:b` was used to refer to that meaning, and therefore doesn't support entailments that, for instance, entail the usage of `:c` from the usage of of `:b`, although they would mean the same thing.
 
 One could also create other semi-opaque semantics where either IRIs or literals were transparent.
 
