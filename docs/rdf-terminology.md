@@ -139,6 +139,6 @@
 
 * [Opaque semantics](/docs/semantics.md#opaque-semantics) – Any semantics for quoted triples where the syntactic form of the arguments to quoted triples is important.
 
-* [Semi-transparent semantics](/docs/semantics.md#semi-transparent-semantics) – Any semantics for quoted triples where the syntactic form of some, but not all, kinds of arguments to quoted triples is important _usually excepting blank nodes so that only their meaning (and not their syntactic form) is important_.
+* [Semi-opaque semantics](/docs/semantics.md#semi-opaque-semantics) – Any semantics for quoted triples where the syntactic form of some, but not all, kinds of arguments to quoted triples is important _usually excepting blank nodes so that only their meaning (and not their syntactic form) is important_.
 
 * [Transparent semantics](/docs/semantics.md#transparent-semantics) – Any semantics for quoted triples where only the meaning of the arguments to quoted triples is important.
