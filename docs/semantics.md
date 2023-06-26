@@ -8,8 +8,8 @@ Note that, although we use the Turtle syntax for convenience, we interpret it in
 
 In RDF (extended to include `owl:sameAs` as equality to provide a way of requiring that two different IRIs mean the same thing)
 ```
-:b                            owl:sameAs :c .
 _:a                           :b         "4"^^xsd:int .
+:b                            owl:sameAs :c .
 ```
 entails
 ```
@@ -29,8 +29,8 @@ _:a                           :c         "4"^^xsd:integer .
 
 In the _transparent_ semantics
 ```
-:b                            owl:sameAs :c .
 << _:a :b "4"^^xsd:int     >> :d         :e .
+:b                            owl:sameAs :c .
 ```
 entails
 ```
@@ -49,8 +49,8 @@ and
 
 In the _opaque_ semantics
 ```
-:b owl:sameAs :c .
 << _:a :b "4"^^xsd:int     >> :d         :e .
+:b                            owl:sameAs :c .
 ```
 does not entail
 ```
@@ -69,8 +69,8 @@ or
 
 In the _semi-transparent_ (also known as _semi-opaque_) semantics, as proposed in [the RDF-star final community group report](https://www.w3.org/2021/12/rdf-star.html)
 ```
-:b owl:sameAs :c .
 << _:a :b "4"^^xsd:int     >> :d         :e .
+:b                            owl:sameAs :c .
 ```
 does entail
 ```
