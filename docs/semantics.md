@@ -21,7 +21,7 @@ _:a                           :b         "4"^^xsd:integer .
 ```
 and 
 ```
-_:a                           :c         "4"^^xsd:integer .
+_:a                           :c         "4"^^xsd:int .
 ```
 
 
