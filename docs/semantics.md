@@ -15,7 +15,7 @@ entails
 ```
 _:f                           :b         "4"^^xsd:int .
 ```
-(because blank nodes can be replaced by blank nodes without chnaging their meaning)
+(because blank nodes can be replaced by blank nodes without changing their meaning)
 
 and 
 ```
