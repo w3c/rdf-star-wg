@@ -15,14 +15,19 @@ entails
 ```
 _:f                           :b         "4"^^xsd:int .
 ```
+(because blank nodes can be replaced by blank nodes without chnaging their meaning)
+
 and 
 ```
 _:a                           :b         "4"^^xsd:integer .
 ```
+(because `xsd:int` and `xsd:integer` mean the same datatype as per the RDF specification)
+
 and 
 ```
 _:a                           :c         "4"^^xsd:integer .
 ```
+(because `:b`and `:c` mean the same thing as per the `owl:sameAs` declaration above).
 
 
 ## Transparent Semantics
