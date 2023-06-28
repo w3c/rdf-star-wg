@@ -1,6 +1,6 @@
 # RDF-star Semantics Options
 
-There have been several different semantics proposals for quoted triples, some with multiple semantics.  The proposed semantics differ in technical details but also differ in the entailments they support.  The major differences between semantics can be summarized in whether they are sensitive to the precise syntax of quoted triples or only to the semantics of the components of quoted triples.   The first kind of semantics have been called opaque and the second kind transparent.  There is also a semi-opaque (or semi-transparent) semantics, as in the community report, where the syntax of IRIs and literals are important but only the meaning of blank nodes is.
+There have been several different semantics proposals for quoted triples, some with multiple semantics.  The proposed semantics differ in technical details but also differ in the entailments they support.  The major differences between semantics can be summarized in whether they are sensitive to the precise syntax of quoted triples or only to the semantics of the components of quoted triples.   The first kind of semantics have been called opaque and the second kind transparent.  There is also a semi-opaque (or semi-transparent) semantics, as in the community report, where the treatment of blank nodes remains unchanged from standard RDF (i.e., they remain transparent, and their syntactic form remains unimportant), but for IRIs and literals, their precise syntactic form is significant.
 
 The difference between the semantics can be seen in the following examples.
 
