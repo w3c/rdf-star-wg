@@ -102,6 +102,34 @@ Consider using `data-transform="updateExample"` with `<!-- .. -->` comments to a
   </pre>
 ```
 
+### PREFIX/BASE use in examples
+
+Turtle and TriG examples should prefer the use of `PREFIX` and `BASE` to `@prefix` and `@base`. This creates a uniform style between Turtle/TriG and SPARQL and facilitates copy/paste.
+
+Doing this, [Example 1](https://www.w3.org/TR/rdf12-turtle/#ex-intro) in the Turtle Spec becomes the following:
+
+```turtle
+BASE <http://example.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rel: <http://www.perceive.net/schemas/relationship/>
+
+<#green-goblin>
+  rel:enemyOf <#spiderman> ;
+  a foaf:Person ;    # in the context of the Marvel universe
+  foaf:name "Green Goblin" .
+
+<#spiderman>
+  rel:enemyOf <#green-goblin> ;
+  a foaf:Person ;
+  foaf:name "Spiderman", "Человек-паук"@ru .
+```
+
+(There was some preference for using the lower-case `prefix` and `base` instead, which is allowed by the grammar, as such tokens are case-insensitive, but consistency is also important).
+
+Exceptions to this rule is where the grammar is discussed explicitly, and examples using `@prefix` and `@base` are appropriate. Also, possibly `prefix` and `base` to clarify the case-insensitive nature of such tokens.
+
 ## Contributors
 
 ### Configuration fields
