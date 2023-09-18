@@ -102,7 +102,7 @@ Consider using `data-transform="updateExample"` with `<!-- .. -->` comments to a
   </pre>
 ```
 
-### PREFIX/BASE use in examples
+### Using `PREFIX` and `BASE` in examples
 
 Turtle and TriG examples should prefer the use of `PREFIX` and `BASE` to `@prefix` and `@base`. This creates a uniform style between Turtle/TriG and SPARQL and facilitates copy/paste.
 
@@ -128,7 +128,7 @@ PREFIX rel: <http://www.perceive.net/schemas/relationship/>
 
 (There was some preference for using the lower-case `prefix` and `base` instead, which is allowed by the grammar, as such tokens are case-insensitive, but consistency is also important).
 
-Exceptions to this rule is where the grammar is discussed explicitly, and examples using `@prefix` and `@base` are appropriate. Also, possibly `prefix` and `base` to clarify the case-insensitive nature of such tokens.
+Exceptions to this rule are where the grammar is discussed explicitly, and examples using `@prefix` and `@base` are appropriate. Also, possibly `prefix` and `base` to clarify the case-insensitive nature of such tokens.
 
 ## Contributors
 
