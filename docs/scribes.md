@@ -14,19 +14,18 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Lassila, Ora
 - Alexiev, Vladimir
 - Haudebourg, Timothée
-- Arndt, Dörthe
-- Hartig, Olaf
-- Patel-Schneider, Peter
 - Champin, Pierre-Antoine
 - Williams, Gregory
-- Gschwend, Adrian
 - Taelman, Ruben
 - Thibodeau, Ted
 - Zimmermann, Antoine
 - Seaborne, Andy
 - Pellissier Tanon, Thomas
 - Kellogg, Gregg
-
+- Arndt, Dörthe
+- Hartig, Olaf
+- Patel-Schneider, Peter
+- Gschwend, Adrian
 
 ## Never scribed
 - Bremer, Erich 
@@ -37,14 +36,14 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 
 ## Already scribed 
 - Alexiev, Vladimir  1x
-- Arndt, Dörthe  3x
+- Arndt, Dörthe  4x
 - Champin, Pierre-Antoine  18x
-- Gschwend, Adrian  10x
-- Hartig, Olaf  4x
+- Gschwend, Adrian  11x
+- Hartig, Olaf  5x
 - Haudebourg, Timothée  2x
 - Kellogg, Gregg  11x
 - Lassila, Ora  2x
-- Patel-Schneider, Peter  5x
+- Patel-Schneider, Peter  6x
 - Pellissier Tanon, Thomas  2x
 - Seaborne, Andy  10x
 - Taelman, Ruben  3x
