@@ -29,7 +29,7 @@ Sometimes informally called: "Triple Instance".
 
 An *occurrence* of a triple is a *possible use* of it (presumably *through* but not *as* [tokens](https://plato.stanford.edu/entries/types-tokens/#Occ)), on the level of the abstract syntax.
 
-This is closely related to the (non-normative) definition of a [reified RDF statement](https://www.w3.org/TR/rdf11-mt/#reification):
+This is closely related to the (non-normative) definition of a [reified triple](https://www.w3.org/TR/rdf11-mt/#reification):
 
 > The subject of a reification is intended to refer to a concrete realization of an RDF triple, such as a document in a surface syntax, rather than a triple considered as an abstract object. This supports use cases where properties such as dates of composition or provenance information are applied to the reified triple, which are meaningful only when thought of as referring to a particular instance or token of a triple.
 
