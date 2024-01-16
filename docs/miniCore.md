@@ -5,7 +5,7 @@ This proposal aims to define a minimal core and sensible extension points.
 
 ## Consensus on Annotation Syntax
 
-December 2023 we found consensus around the annotation syntax (sometimes also called shorthand syntax) 
+December 2023 we found a possible position around the annotation syntax (sometimes also called shorthand syntax) 
 with added naming to support multi-edges:
 
 ```turtle
