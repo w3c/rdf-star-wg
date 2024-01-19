@@ -15,14 +15,14 @@ with added naming to support multi-edges:
 
 ### Use Cases
 
-I interpret this consensus as not just about some syntax, but as about the most important use cases:
+This option is not just about some syntax, but is about the most important use cases:
 
 - annotating a statement with administrative or qualifying metadata
 - support for multiplicity in LPG-style edge annotation
-- and both of that with intuitive and easy to use syntax.
+- intuitive and easy to use syntax
 
-What is missing is support for annotating multiple triples in one go, i.e. support for graphs, 
-but lets ignore that for now.
+This option is missing support for annotating multiple triples in one go (i.e., support for graphs), 
+but let's ignore that for now.
 
 ### Intuitive Semantics
 
