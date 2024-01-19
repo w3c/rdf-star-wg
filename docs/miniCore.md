@@ -52,10 +52,10 @@ syntax so favorably glosses over, namely:
 - referential transparency vs referential opacity
 - fact vs claim
 
-The WG has to have those discussions, although they are tedious, to come to an informed decision.
+The WG has to have those discussions, although they may seem tedious, to reach an informed consensus.
 This will probably lead to some vocabulary to disambiguate annotations on asserted triples from 
-those on unasserted ones and those from annotations on quotes, etc. However, for reasons of time 
-the reference to that mail has to do for now.
+those on unasserted ones and those from annotations on quotes, etc. However, for reasons of time, 
+the reference to [that email message](https://lists.w3.org/Archives/Public/public-rdf-star-wg/2024Jan/0062.html) has to do for now.
 
 
 ## Mapping the Annotation Syntax
