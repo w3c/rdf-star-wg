@@ -42,7 +42,7 @@ important semantic aspects:
 So far, everything looks pretty good to this writer (modulo support for graphs). The devil lies in the mapping to
 N-Triples, where we have to make explicit what is so conveniently implied by the annotation syntax.
 
-### Basic Problems and Abstractions - Un-intuitive Semantics
+### Basic Problems and Abstractions — Un-intuitive Semantics
 
 A recent mail discussed some of 
 [the not so obvious underlying issues](https://lists.w3.org/Archives/Public/public-rdf-star-wg/2024Jan/0062.html)
