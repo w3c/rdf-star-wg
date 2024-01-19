@@ -44,9 +44,9 @@ N-Triples, where we have to make explicit what is so conveniently implied by the
 
 ### Basic Problems and Abstractions — Un-intuitive Semantics
 
-A recent mail discussed some of 
-[the not so obvious underlying issues](https://lists.w3.org/Archives/Public/public-rdf-star-wg/2024Jan/0062.html)
-that the annotation syntax so favoirably glosses over in more detail, namely:
+[A recent email message](https://lists.w3.org/Archives/Public/public-rdf-star-wg/2024Jan/0062.html)
+discussed in more detail some of the not-so-obvious underlying issues that the annotation
+syntax so favorably glosses over, namely:
 
 - asserted vs unasserted statements
 - referential transparency vs referential opacity
