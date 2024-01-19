@@ -1,5 +1,7 @@
 # A Minimal Core and Clearly Defined Extension Points
 
+by [Thomas Lörtsch](https://github.com/rat10) (2024-01-12T8:45-0500)
+
 This proposal aims to define a minimal core and sensible extension points.
 
 
