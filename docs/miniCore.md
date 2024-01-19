@@ -39,8 +39,8 @@ important semantic aspects:
 
 ## Mapping to RDF Triples
 
-So far everything looks pretty good IMO (modulo support for graphs). The devil lies in the mapping to
-N-Triples, because here we have to make explicit what the annotation syntax so conveniently alludes to.
+So far, everything looks pretty good to this writer (modulo support for graphs). The devil lies in the mapping to
+N-Triples, where we have to make explicit what is so conveniently implied by the annotation syntax.
 
 ### Basic Problems and Abstractions - Un-intuitive Semantics
 
