@@ -1,6 +1,6 @@
 # A draft proposal for satisfying the main requirement of the working group
 
-This is a proposal to satisfy the main requirement of the working group by **adding syntactic shorthands to concrete syntaxes for RDF** and **making no changes to either RDF graphs or the core semantics of RDF**. This proposal moves away from the "quoted triples" of the CG report to the idea of named occurrences of triples.
+This is a proposal to satisfy the main requirement of the working group by **adding syntactic shorthands to concrete syntaxes for RDF** and **making no changes to either RDF graphs or the core semantics of RDF**. The proposal moves away from the "quoted triples" of the CG report to the idea of named occurrences of triples.  It started out as https://lists.w3.org/Archives/Public/public-rdf-star-wg/2024Jan/0095.html 
 
 ## Named occurrences of triples
 
@@ -32,19 +32,23 @@ would be syntactic sugar for the following triples (or some variation of them)
 
 and the abstract syntax would not need to be extended.
 
+### Adding an edge between the name and the reification.
+
 A significant option (see the second syntax option below) would instead result in something like:
 
     :e rdf:nameOf [rdf:subject :s; rdf:predicate :p ; rdf:object :o ] .
     :e :a :b .
+
+## Criticisms and responses
 
 This proposal has to handle the usual criticisms raised against standard reification :
 1. It is verbose
 2. It can be inefficient
 3. It can be messy (nodes with missing or duplicate `rdf:subject` / `rdf:predicate` / `rdf:object`)
 
-Issue 1 is alleviated by the double-pointy bracket syntactic sugar in Turtle, TrIg and SPARQL. This can be extended to other concrete syntaxes (in fact RDF/XML already has some syntactic sugar for reification, and the efforts on JSON-LD-star [1] can also be leveraged).
+Issue 1 is alleviated by the double-pointy bracket syntactic sugar in Turtle, TrIg and SPARQL. This can be extended to other concrete syntaxes (in fact RDF/XML already has some syntactic sugar for reification, and the efforts on JSON-LD-star (https://json-ld.github.io/json-ld-star/) can also be leveraged).
 
-Issues 2 and 3 could be alleviated by introducing a notion of "well-formed" RDF (again, a better term can maybe be found). 
+Issues 2 and 3 can be alleviated by introducing a notion of "well-formed" RDF (again, a better term can maybe be found). 
 
 **Definition: An RDF graph is reification well-formed iff any node in it that is the subject of a triple in the graph with predicate `rdf:subject`, `rdf:predicate`, or `rdf:object` must be the subject of exactly one triple in the graph with each of these predicates.**
 
@@ -52,7 +56,7 @@ Systems would not be required to detect or reject ill-formed RDF, but they would
 
 For document collections that don't use the reification vocabulary explicitly well-formedness can be guaranteed if no name is used more than once in a double-pointy bracket construct.  (If the optional expansion is chosen then this second condition is not needed.)
 
-Note that the notion of well-formedness already exists in RDF for Semantic Extensions (they are called "syntactic conditions or restrictions") [2]. The proposal here is to extend it to plain RDF. 
+Note that the notion of well-formedness already exists in RDF for Semantic Extensions (they are called "syntactic conditions or restrictions" in https://www.w3.org/TR/rdf11-semantics/#dfn-semantic-extension). 
 
 ## Options
 
@@ -61,7 +65,7 @@ Here are some options but the core proposal is just the above.  The only option 
 ### Syntax:
 
 * Should there be the ability to have independent creation of named occurences of triples, i.e., allow `<< :e | :a :b :c >>` by itself in concrete syntaxes?
-* Should the expansion be instead to something like `:e :isNameOf <<< :s :p :o >>> .` and `<<< :s :p :o >>>` itself expand to something like `[ rdf:subject :s; rdf:predicate :p; rdf:object :o ]`?  (Instead of a fresh blank node the node might be determined by :s, :p, and :o.)  This option has decided benefits because it separates the reification from the name but at the expense of adding an extra triple.
+* Should the expansion be instead to something like `:e rdf:isNameOf <<< :s :p :o >>> .` and `<<< :s :p :o >>>` itself expand to something like `[ rdf:subject :s; rdf:predicate :p; rdf:object :o ]`?  (Instead of a fresh blank node the node might be determined by :s, :p, and :o.)  This option has decided benefits because it separates the reification from the name but at the expense of adding an extra triple.
 
 ### Vocabulary:
 
@@ -97,6 +101,7 @@ Here are some options but the core proposal is just the above.  The only option 
 * No changes to the normative parts of the current RDF semantics.
 
 
+
 ## Implications of the Proposal
 
 ### SPARQL:
@@ -111,17 +116,10 @@ Here are some options but the core proposal is just the above.  The only option 
 
 ### Names of Triple Occurrences:
 
-The name of a triple occurrence is important.  Creators of RDF content need to realize this.   The syntax is biased towards anonymous blank nodes as names so this might not be too much of a problem.
+The name of a triple occurrence is important.  Creators of RDF content need to realize this.   The syntax is biased towards anonymous blank nodes as names so this should not be too much of a problem.
 
 ### One Name for Multiple Triple Occurrences:
 
-In some earlier proposals it made sense to use the same name in multiple double-pointy bracket constructs because it would then be the name of more than one quoted triple.  This proposal, as presented above, does not allow this possibility.  However, the syntactic variation is :isNameOf does allow the use of the same name in multiple double-pointy bracket constructs.
-
-
-
-
-[1] https://json-ld.github.io/json-ld-star/
-
-[2] https://www.w3.org/TR/rdf11-semantics/#dfn-semantic-extension
+In some earlier proposals it made sense to use the same name in multiple double-pointy bracket constructs because it would then be the name of more than one quoted triple.  This proposal, as presented above, does not allow this possibility.  However, the syntactic variation with `rdf:isNameOf` does support the use of the same name in multiple double-pointy bracket constructs.
 
 
