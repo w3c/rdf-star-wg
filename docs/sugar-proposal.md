@@ -76,7 +76,7 @@ Here are some options but the core proposal is just the above.  The only option 
 
 ### Well-formedness:
 
-* Implementations may/mustnot reject non-well-formed RDF graphs.
+* Implementations must/may/mustnot reject non-well-formed RDF graphs.
 
 ### Semantics:
 
