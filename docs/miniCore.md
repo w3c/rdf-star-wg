@@ -5,7 +5,7 @@ by [Thomas Lörtsch](https://github.com/rat10) (2024-01-12T8:45-0500)
 This proposal aims to define a minimal core and sensible extension points.
 
 
-## Consensus on Annotation Syntax
+## The Annotation Syntax as a Possible Common Ground
 
 In December 2023, we found a possible solution to the annotation syntax (sometimes also called shorthand syntax) 
 with added naming to support multi-edges:
