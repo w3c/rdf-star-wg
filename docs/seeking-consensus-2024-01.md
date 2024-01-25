@@ -3,7 +3,7 @@
 <div class=warning>
 
 This document is written in markdown for easy editing and quick preview in GitHub,
-but a [better rendering](https://htmlpreview.github.io/?https://github.com/w3c/rdf-star-wg/blob/main/docs/seeking-consensus-2024-01.md.md)
+but a [better rendering](https://htmlpreview.github.io/?https://github.com/w3c/rdf-star-wg/blob/main/docs/seeking-consensus-2024-01.html)
 (as a table) is available.
 It is generated with the following command line:
 ```bash
