@@ -1,0 +1,27 @@
+body {
+  font-family: sans;
+}
+
+.grid-list > ul {
+  display: grid;
+  grid-template: auto / 1fr 2fr 2fr 2fr 2fr;
+  padding: 0;
+}
+
+.grid-list > ul > li {
+  display: block;
+  border: thin solid black;
+  padding: 0.1em 0.3em;
+}
+
+.grid-list > ul > li:nth-child(5n+1) {
+  font-weight: bold;
+}
+
+.grid-list > ul > li> hr {
+  display: none;
+}
+
+.warning {
+  display: none;
+}

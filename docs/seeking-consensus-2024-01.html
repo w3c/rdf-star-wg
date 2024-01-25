@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>seeking-consensus-2024-01</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="seeking-consensus-2024-01.css" />
+</head>
+<body>
+<h1 id="seeking-consensus">Seeking consensus</h1>
+<div class=warning>
+
+<p>This document is written in markdown for easy editing and quick
+preview in GitHub, but a <a
+href="https://htmlpreview.github.io/?https://github.com/w3c/rdf-star-wg/blob/main/docs/seeking-consensus-2024-01.md.md">better
+rendering</a> (as a table) is available. It is generated with the
+following command line:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> seeking-consensus-2024-01.md <span class="at">-f</span> gfm <span class="at">-o</span> seeking-consensus-2024-01.html <span class="at">-s</span> <span class="at">-c</span> seeking-consensus-2024-01.css</span></code></pre></div>
+</div>
+
+<div class=grid-list>
+
+<ul>
+<li><hr />
+<p>Approaches</p>
+<hr /></li>
+<li><p>sugar</p></li>
+<li><p>sugar+</p></li>
+<li><p>triple-terms / descriptors</p></li>
+<li><p>edge statements / RDFn</p></li>
+<li><hr />
+<p>Source</p>
+<hr /></li>
+<li><p><a
+href="https://github.com/w3c/rdf-star-wg/blob/main/docs/sugar-proposal.md">https://github.com/w3c/rdf-star-wg/blob/main/docs/sugar-proposal.md</a></p></li>
+<li><p><a
+href="https://github.com/w3c/rdf-star-wg/blob/main/docs/sugar-proposal.md#syntax">https://github.com/w3c/rdf-star-wg/blob/main/docs/sugar-proposal.md#syntax</a></p></li>
+<li><p><a
+href="https://github.com/afs/rdf-star-notes/blob/main/reif-atoms.md">https://github.com/afs/rdf-star-notes/blob/main/reif-atoms.md</a></p></li>
+<li><p><a
+href="https://lists.w3.org/Archives/Public/public-rdf-star-wg/2024Jan/0002.html">https://lists.w3.org/Archives/Public/public-rdf-star-wg/2024Jan/0002.html</a>
+(syntax)</p>
+<p><a
+href="https://github.com/w3c/rdf-star-wg/blob/main/docs/rdfn-semantics.md">https://github.com/w3c/rdf-star-wg/blob/main/docs/rdfn-semantics.md</a>
+(semantics)</p></li>
+<li><hr />
+<p><code>&lt;&lt;:e | :s :p :o&gt;&gt;</code> expands to</p>
+<hr /></li>
+<li><pre><code>:e rdf:subject :s .
+:e rdf:predicate:p .
+:e rdf:object :o .</code></pre></li>
+<li><pre><code>:e rdf:nameOf [
+  rdf:subject :s ;
+  rdf:subject :p ;
+  rdf:subject :o
+]</code></pre></li>
+<li><pre><code>:e rdf:nameOf &lt;&lt;(:s :p :o)&gt;&gt; .</code></pre></li>
+<li><pre><code>:e | :s :p :o .</code></pre></li>
+<li><hr />
+<p>Abstract syntax</p>
+<hr /></li>
+<li><p>unchanged:</p>
+<pre><code>graph     := triple*
+triple    := subject predicate object
+subject   := iri | bnode
+predicate := iri
+object    := iri | bnode | literal</code></pre></li>
+<li><p>unchanged:</p>
+<pre><code>graph     := triple*
+triple    := subject predicate object
+subject   := iri | bnode
+predicate := iri
+object    := iri | bnode | literal</code></pre></li>
+<li><p>add new kind of term:</p>
+<pre><code>graph       := triple*
+triple      := subject predicate object
+subject     := iri | bnode | TRIPLE-TERM
+predicate   := iri
+object      := iri | bnode | literal
+               | TRIPLE-TERM
+TRIPLE-TERM := triple</code></pre></li>
+<li><p>add new kind of statement in graph</p>
+<pre><code>graph     := (triple | EDGE)*
+triple    := subject predicate object
+subject   := iri | bnode
+predicate := iri
+object    := iri | bnode | literal
+EDGE      := NAME subject predicate object
+NAME      := iri | bnode</code></pre></li>
+<li><hr />
+<p>Interpretation</p>
+<hr /></li>
+<li><p>unchanged:</p>
+<pre><code>IR: set of resources
+IP: set of properties
+IS: maps IRIs to IR U IP
+IL: maps literals to IR
+IEXT: maps properties to subsets of IRxIR  </code></pre></li>
+<li><p>unchanged:</p>
+<pre><code>IR, IP, IS, IL, IEXT as before</code></pre></li>
+<li><p>add map for triple terms:</p>
+<pre><code>IR, IP, IS, IL, IEXT as before
+
+IA: maps triple terms to IRxIPxIR</code></pre></li>
+<li><p>add map for edges</p>
+<pre><code>IR, IP, IS, IL, IEXT as before
+
+IO: binary relation over IRx(IRxIPxIR)</code></pre></li>
+<li><hr />
+<p>Satisfaction</p>
+<hr /></li>
+<li><p>unchanged:</p>
+<pre><code>[I+A](iri) = IS(iri)
+[I+A](lit) = IL(lit)
+[I+A](bnode) = A(bnode)
+
+[I+A](triple) is true iff
+  ([I+A](subj), [I+A](obj)) in IEXT([I+A](pred))
+
+[I+A](graph) is true unless
+  [I+A](x) is false for some triple x in graph</code></pre></li>
+<li><p>unchanged:</p>
+<pre><code>[I+A] as before for terms, triples and graphs</code></pre></li>
+<li><p>add interpretation for triple-terms</p>
+<pre><code>[I+A] as before for IRIs, literals, bnodes, triples and graphs
+
+[I+A](triple-term) = ([I+A](subj), [I+A](pred), [I+A](obj))</code></pre></li>
+<li><p>add semantic condition for edges</p>
+<pre><code>[I+A] as before for terms and triples
+
+[I+A](edge) is true iff
+  ([I+A](name), ([I+A](subj), [I+A](pred), [I+A](obj))) in IO
+
+[I+A](graph) is true unless
+  [I+A](x) is false for some triple x in graph
+  OR some edge x in graph</code></pre></li>
+<li><hr />
+<p>Supports one name for several triples?</p>
+<hr /></li>
+<li><p>no (mixes the subjects, predicates and objects)</p></li>
+<li><p>yes</p></li>
+<li><p>yes</p></li>
+<li><p>yes</p></li>
+<li><hr />
+<p>Atomicity</p>
+<hr /></li>
+<li><p>weak (via well-formed-ness)</p></li>
+<li><p>weak (via well-formed-ness)</p></li>
+<li><p>strong (enforced by abstract syntax)</p></li>
+<li><p>strong (enforced by abstract syntax)</p></li>
+<li><hr />
+<p>Variant</p>
+<hr /></li>
+<li><p>see sugar+</p></li>
+<li><p><a
+href="https://lists.w3.org/Archives/Public/public-rdf-star-wg/2024Jan/0141.html">https://lists.w3.org/Archives/Public/public-rdf-star-wg/2024Jan/0141.html</a></p>
+<p>Enrico's proposal includes a stronger version of
+well-formed-ness</p></li>
+<li><p><a
+href="https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/">https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/</a></p>
+<p>Antoine's proposal of a semantics for the CG's RDF-star could also be
+adopted. (no change to the abstract syntax)</p></li>
+<li></li>
+</ul>
+</div>
+</body>
+</html>
