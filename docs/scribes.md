@@ -9,7 +9,6 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Raggett, Dave
 - Sasaki, Felix
 - Alexiev, Vladimir
-- Williams, Gregory
 - Taelman, Ruben
 - Thibodeau, Ted
 - Zimmermann, Antoine
@@ -26,6 +25,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Haudebourg, Timothée
 - Champin, Pierre-Antoine
 - Lassila, Ora
+- Williams, Gregory
 
 
 
@@ -50,7 +50,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Seaborne, Andy  11x
 - Taelman, Ruben  3x
 - Thibodeau, Ted  3x
-- Williams, Gregory  3x
+- Williams, Gregory  4x
 - Zimmermann, Antoine  2x
 - Bremer, Erich 1x
 
