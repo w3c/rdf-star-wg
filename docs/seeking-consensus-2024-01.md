@@ -170,7 +170,7 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
 
 
 - ********************
-  Supports one name for several triples?
+  [Supports one name for several triples?](https://lists.w3.org/Archives/Public/public-rdf-star-wg/2024Jan/0175.html)
   ********************
   
 - no (mixes the subjects, predicates and objects)
@@ -205,3 +205,5 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
 - 
 
 </div>
+
+Source: https://github.com/w3c/rdf-star-wg/blob/main/docs/seeking-consensus-2024-01.md
