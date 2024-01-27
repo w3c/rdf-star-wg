@@ -85,7 +85,7 @@
 
 <p>This document is written in markdown for easy editing and quick
 preview in GitHub, but a <a
-href="https://htmlpreview.github.io/?https://github.com/w3c/rdf-star-wg/blob/main/docs/seeking-consensus-2024-01.md.md">better
+href="https://htmlpreview.github.io/?https://github.com/w3c/rdf-star-wg/blob/main/docs/seeking-consensus-2024-01.html">better
 rendering</a> (as a table) is available. It is generated with the
 following command line:</p>
 <div class="sourceCode" id="cb1"><pre
@@ -130,6 +130,16 @@ href="https://github.com/w3c/rdf-star-wg/blob/main/docs/rdfn-semantics.md">https
 ]</code></pre></li>
 <li><pre><code>:e rdf:nameOf &lt;&lt;(:s :p :o)&gt;&gt; .</code></pre></li>
 <li><pre><code>:e | :s :p :o .</code></pre></li>
+<li><hr />
+<p><code>SELECT (COUNT(*) AS ?c) { ?s ?p ?o }</code><br/>over
+<code>&lt;&lt;:e | :s :p :o&gt;&gt; :pp :oo .</code><br/>results in</p>
+<hr /></li>
+<li><p>4 (or 5 if <code>:e rdf:type rdf:Statement</code> is in the
+result of the expansion as well)</p></li>
+<li><p>5 (or 6 if <code>:e rdf:type rdf:Statement</code> is in the
+result of the expansion as well)</p></li>
+<li><p>2</p></li>
+<li><p>1?</p></li>
 <li><hr />
 <p>Abstract syntax</p>
 <hr /></li>
