@@ -92,7 +92,7 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
   ```
   graph       := triple*
   triple      := subject predicate object
-  subject     := iri | bnode | TRIPLE-TERM
+  subject     := iri | bnode
   predicate   := iri
   object      := iri | bnode | literal
                  | TRIPLE-TERM
