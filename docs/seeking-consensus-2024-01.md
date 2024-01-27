@@ -58,8 +58,8 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
   ```
 
 
--********************
-  `SELECT (COUNT(*) AS ?c) { ?s ?p ?o }` over `<<:e | :s :p :o>> :pp :oo .` results in
+- ********************
+  `SELECT (COUNT(*) AS ?c) { ?s ?p ?o }`<br/>over `<<:e | :s :p :o>> :pp :oo .`<br/>results in
   ********************
 
 - 4 (or 5 if `:e rdf:type rdf:Statement` is in the result of the expansion as well)
