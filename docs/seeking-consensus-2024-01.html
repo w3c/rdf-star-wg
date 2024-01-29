@@ -125,8 +125,8 @@ href="https://github.com/w3c/rdf-star-wg/blob/main/docs/rdfn-semantics.md">https
 :e rdf:object :o .</code></pre></li>
 <li><pre><code>:e rdf:nameOf [
   rdf:subject :s ;
-  rdf:subject :p ;
-  rdf:subject :o
+  rdf:predicate:p ;
+  rdf:object :o
 ]</code></pre></li>
 <li><pre><code>:e rdf:nameOf &lt;&lt;(:s :p :o)&gt;&gt; .</code></pre></li>
 <li><pre><code>:e | :s :p :o .</code></pre></li>
@@ -160,8 +160,7 @@ object    := iri | bnode | literal</code></pre></li>
 triple      := subject predicate object
 subject     := iri | bnode
 predicate   := iri
-object      := iri | bnode | literal
-               | TRIPLE-TERM
+object      := iri | bnode | literal | TRIPLE-TERM
 TRIPLE-TERM := triple</code></pre></li>
 <li><p>add new kind of statement in graph</p>
 <pre><code>graph     := (triple | EDGE)*
@@ -185,7 +184,7 @@ IEXT: maps properties to subsets of IRxIR  </code></pre></li>
 <li><p>add map for triple terms:</p>
 <pre><code>IR, IP, IS, IL, IEXT as before
 
-IA: maps triple terms to IRxIPxIR</code></pre></li>
+IA: set of reification atoms, ⊆ IRxIPxIR</code></pre></li>
 <li><p>add map for edges</p>
 <pre><code>IR, IP, IS, IL, IEXT as before
 
@@ -208,7 +207,7 @@ IO: binary relation over IRx(IRxIPxIR)</code></pre></li>
 <li><p>add interpretation for triple-terms</p>
 <pre><code>[I+A] as before for IRIs, literals, bnodes, triples and graphs
 
-[I+A](triple-term) = ([I+A](subj), [I+A](pred), [I+A](obj))</code></pre></li>
+[I+A](triple-term) = ([I+A](subj), [I+A](pred), [I+A](obj)) in IA</code></pre></li>
 <li><p>add semantic condition for edges</p>
 <pre><code>[I+A] as before for terms and triples
 

@@ -46,8 +46,8 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
 - ```
   :e rdf:nameOf [
     rdf:subject :s ;
-    rdf:subject :p ;
-    rdf:subject :o
+    rdf:predicate:p ;
+    rdf:object :o
   ]
   ```
 - ```
@@ -94,8 +94,7 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
   triple      := subject predicate object
   subject     := iri | bnode
   predicate   := iri
-  object      := iri | bnode | literal
-                 | TRIPLE-TERM
+  object      := iri | bnode | literal | TRIPLE-TERM
   TRIPLE-TERM := triple
   ```
 - add new kind of statement in graph
@@ -130,7 +129,7 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
   ```
   IR, IP, IS, IL, IEXT as before
 
-  IA: maps triple terms to IRxIPxIR
+  IA: set of reification atoms, ⊆ IRxIPxIR
   ```
 - add map for edges
   ```
@@ -164,7 +163,7 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
   ```
   [I+A] as before for IRIs, literals, bnodes, triples and graphs
 
-  [I+A](triple-term) = ([I+A](subj), [I+A](pred), [I+A](obj))
+  [I+A](triple-term) = ([I+A](subj), [I+A](pred), [I+A](obj)) in IA
   ```
 - add semantic condition for edges
   ```
