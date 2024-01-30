@@ -125,7 +125,7 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
   ```
   IR, IP, IS, IL, IEXT as before
   ```
-- add map for triple terms:
+- add set for triple terms:
   ```
   IR, IP, IS, IL, IEXT as before
 
@@ -173,8 +173,7 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
     ([I+A](name), ([I+A](subj), [I+A](pred), [I+A](obj))) in IO
 
   [I+A](graph) is true unless
-    [I+A](x) is false for some triple x in graph
-    OR some edge x in graph
+    [I+A](x) is false for some triple OR EDGE x in graph
   ```
 
 
@@ -206,12 +205,72 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
 - https://lists.w3.org/Archives/Public/public-rdf-star-wg/2024Jan/0141.html
 
   Enrico's proposal includes a stronger version of well-formed-ness
+
 - https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/
 
-  Antoine's proposal of a semantics for the CG's RDF-star
-  could also be adopted.
-	(no change to the abstract syntax)
+  <abbr title="Antoine Zimermann">AZ</abbr>'s proposal of a semantics for the CG's RDF-star
+  could also be adopted as is (the abstract syntax is essentially the same).
+  See below, rows 'Interpretation AZ' and 'Satisfaction AZ'.
+
+- https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/
+
+  <abbr title="Antoine Zimermann">AZ</abbr>'s proposal of a semantics for the CG's RDF-star
+  could easily be adapted to this abstract syntax.
+  See below, rows 'Interpretation AZ' and 'Satisfaction AZ'.
+
+- ********************
+  Interpretation variant [AZ](https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/)
+  ********************
+
 - 
+- 
+- add map and properties for triple terms:
+  ```
+  IR, IP, IS, IL, IEXT as before
+
+  IT: maps ground triple-terms to IR
+  Ps, Pp, Po are elements of IP
+  ```
+- add properties for edges
+  ```
+  IR, IP, IS, IL, IEXT as before
+
+  Pe, Ps, Pp, Po are elements of IP
+  ```
+
+
+- ********************
+  Satisfaction variant [AZ](https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/)
+  ********************
+
+-
+- 
+- add interpretation and semantic condition for triple-terms
+  ```
+  [I+A] as before for IRIs, literals, bnodes, triples and graphs
+
+  A is defined for blank nodes AND NON-GROUND TRIPLE-TERMS
+
+  [I+A](triple-term) = | IT(triple-term) if ground
+                       | A(triple-term)  otherwise
+
+  ([I+A](triple-term), [I+A](subj)) ∈ IEXT(Ps)
+  ([I+A](triple-term), [I+A](pred)) ∈ IEXT(Pp)
+  ([I+A](triple-term), [I+A](obj))  ∈ IEXT(Po)
+  ```
+- add semantic condition for edges
+  ```
+  [I+A] as before for terms and triples
+
+  [I+A](edge) is true iff ∃t ∈ IR such that
+    ([I+A](name), t) ∈ IEXT(Pe)
+    (t, [I+A](subj)) ∈ IEXT(Ps)
+    (t, [I+A](pred)) ∈ IEXT(Pp)
+    (t, [I+A](obj))  ∈ IEXT(Po)
+
+  [I+A](graph) is true unless
+    [I+A](x) is false for some triple OR EDGE x in graph
+  ```
 
 </div>
 

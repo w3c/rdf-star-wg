@@ -181,7 +181,7 @@ IL: maps literals to IR
 IEXT: maps properties to subsets of IRxIR  </code></pre></li>
 <li><p>unchanged:</p>
 <pre><code>IR, IP, IS, IL, IEXT as before</code></pre></li>
-<li><p>add map for triple terms:</p>
+<li><p>add set for triple terms:</p>
 <pre><code>IR, IP, IS, IL, IEXT as before
 
 IA: set of reification atoms, ⊆ IRxIPxIR</code></pre></li>
@@ -215,8 +215,7 @@ IO: binary relation over IRx(IRxIPxIR)</code></pre></li>
   ([I+A](name), ([I+A](subj), [I+A](pred), [I+A](obj))) in IO
 
 [I+A](graph) is true unless
-  [I+A](x) is false for some triple x in graph
-  OR some edge x in graph</code></pre></li>
+  [I+A](x) is false for some triple OR EDGE x in graph</code></pre></li>
 <li><hr />
 <p><a
 href="https://lists.w3.org/Archives/Public/public-rdf-star-wg/2024Jan/0175.html">Supports
@@ -243,9 +242,58 @@ href="https://lists.w3.org/Archives/Public/public-rdf-star-wg/2024Jan/0141.html"
 well-formed-ness</p></li>
 <li><p><a
 href="https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/">https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/</a></p>
-<p>Antoine's proposal of a semantics for the CG's RDF-star could also be
-adopted. (no change to the abstract syntax)</p></li>
+<p><abbr title="Antoine Zimermann">AZ</abbr>'s proposal of a semantics
+for the CG's RDF-star could also be adopted as is (the abstract syntax
+is essentially the same). See below, rows 'Interpretation AZ' and
+'Satisfaction AZ'.</p></li>
+<li><p><a
+href="https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/">https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/</a></p>
+<p><abbr title="Antoine Zimermann">AZ</abbr>'s proposal of a semantics
+for the CG's RDF-star could easily be adapted to this abstract syntax.
+See below, rows 'Interpretation AZ' and 'Satisfaction AZ'.</p></li>
+<li><hr />
+<p>Interpretation variant <a
+href="https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/">AZ</a></p>
+<hr /></li>
 <li></li>
+<li></li>
+<li><p>add map and properties for triple terms:</p>
+<pre><code>IR, IP, IS, IL, IEXT as before
+
+IT: maps ground triple-terms to IR
+Ps, Pp, Po are elements of IP</code></pre></li>
+<li><p>add properties for edges</p>
+<pre><code>IR, IP, IS, IL, IEXT as before
+
+Pe, Ps, Pp, Po are elements of IP</code></pre></li>
+<li><hr />
+<p>Satisfaction variant <a
+href="https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/">AZ</a></p>
+<hr /></li>
+<li></li>
+<li></li>
+<li><p>add interpretation and semantic condition for triple-terms</p>
+<pre><code>[I+A] as before for IRIs, literals, bnodes, triples and graphs
+
+A is defined for blank nodes AND NON-GROUND TRIPLE-TERMS
+
+[I+A](triple-term) = | IT(triple-term) if ground
+                     | A(triple-term)  otherwise
+
+([I+A](triple-term), [I+A](subj)) ∈ IEXT(Ps)
+([I+A](triple-term), [I+A](pred)) ∈ IEXT(Pp)
+([I+A](triple-term), [I+A](obj))  ∈ IEXT(Po)</code></pre></li>
+<li><p>add semantic condition for edges</p>
+<pre><code>[I+A] as before for terms and triples
+
+[I+A](edge) is true iff ∃t ∈ IR such that
+  ([I+A](name), t) ∈ IEXT(Pe)
+  (t, [I+A](subj)) ∈ IEXT(Ps)
+  (t, [I+A](pred)) ∈ IEXT(Pp)
+  (t, [I+A](obj))  ∈ IEXT(Po)
+
+[I+A](graph) is true unless
+  [I+A](x) is false for some triple OR EDGE x in graph</code></pre></li>
 </ul>
 </div>
 
