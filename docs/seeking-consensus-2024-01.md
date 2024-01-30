@@ -208,7 +208,7 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
 
 - https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/
 
-  <abbr title="Antoine Zimermann">AZ</abbr>'s proposal of a semantics for the CG's RDF-star
+  <abbr title="Antoine Zimmermann">AZ</abbr>'s proposal of a semantics for the CG's RDF-star
   could also be adopted as is (the abstract syntax is essentially the same).
   See below, rows 'Interpretation AZ' and 'Satisfaction AZ'.
 
