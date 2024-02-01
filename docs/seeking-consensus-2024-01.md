@@ -81,10 +81,10 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
   ## :e       rdf:type       rdf:Statement .
   ```
 - ```
-  :e       rdf:nameOf _blank1
-  _blank1  rdf:subject   :s .
-  _blank1  rdf:predicate :p .
-  _blank1  rdf:object    :o .
+  :e       rdf:nameOf _:blank1
+  _:blank1  rdf:subject   :s .
+  _:blank1  rdf:predicate :p .
+  _:blank1  rdf:object    :o .
   :e       :pp           :oo .
   ## possibly also
   ## :e       rdf:type       rdf:Statement .
