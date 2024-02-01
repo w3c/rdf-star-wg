@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>seeking-consensus-2024-01</title>
+  <title>Seeking Consensus</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -80,6 +80,9 @@
   <link rel="stylesheet" href="seeking-consensus-2024-01.css" />
 </head>
 <body>
+<header id="title-block-header">
+<h1 class="title">Seeking Consensus</h1>
+</header>
 <h1 id="seeking-consensus">Seeking consensus</h1>
 <div class=warning>
 
@@ -121,18 +124,18 @@ href="https://github.com/w3c/rdf-star-wg/blob/main/docs/rdfn-semantics.md">https
 <p><code>&lt;&lt;:e | :s :p :o&gt;&gt;</code> expands to</p>
 <hr /></li>
 <li><pre><code>:e rdf:subject :s .
-:e rdf:predicate:p .
+:e rdf:predicate :p .
 :e rdf:object :o .</code></pre></li>
 <li><pre><code>:e rdf:nameOf [
   rdf:subject :s ;
-  rdf:predicate:p ;
+  rdf:predicate :p ;
   rdf:object :o
 ]</code></pre></li>
-<li><pre><code>:e rdf:nameOf &lt;&lt;(:s :p :o)&gt;&gt; .</code></pre></li>
+<li><pre><code>:e rdf:nameOf &lt;&lt;( :s :p :o )&gt;&gt; .</code></pre></li>
 <li><pre><code>:e | :s :p :o .</code></pre></li>
 <li><hr />
-<p><code>SELECT (COUNT(*) AS ?c) { ?s ?p ?o }</code><br/>over
-<code>&lt;&lt;:e | :s :p :o&gt;&gt; :pp :oo .</code><br/>results in</p>
+<p><code>SELECT (COUNT(*) AS ?c)</code><br /><code>WHERE { ?s ?p ?o }</code><br/>over<br/><code>&lt;&lt;:e | :s :p :o&gt;&gt;</code><br /><code>  :pp :oo .</code><br/>results
+in</p>
 <hr /></li>
 <li><p>4 (or 5 if <code>:e rdf:type rdf:Statement</code> is in the
 result of the expansion as well)</p></li>
@@ -140,6 +143,25 @@ result of the expansion as well)</p></li>
 result of the expansion as well)</p></li>
 <li><p>2</p></li>
 <li><p>1?</p></li>
+<li><hr />
+<p><code>SELECT *</code><br /><code>WHERE { ?s ?p ?o }</code><br/>over<br/><code>&lt;&lt;:e | :s :p :o&gt;&gt;</code><br /><code>  :pp :oo .</code><br/>results
+in</p>
+<hr /></li>
+<li><pre><code>:e rdf:subject   :s .
+:e rdf:predicate :p .
+:e rdf:object    :o .
+:e :pp           :oo .
+## possibly also
+## :e       rdf:type       rdf:Statement .</code></pre></li>
+<li><pre><code>:e       rdf:nameOf _blank1
+_blank1  rdf:subject   :s .
+_blank1  rdf:predicate :p .
+_blank1  rdf:object    :o .
+:e       :pp           :oo .
+## possibly also
+## :e       rdf:type       rdf:Statement .</code></pre></li>
+<li><p><code>:e :pp :oo .</code><br /><code>:e rdf:nameOf &lt;&lt;(:s :p :o)&gt;&gt; .</code></p></li>
+<li><p><code>:e :pp :oo .</code></p></li>
 <li><hr />
 <p>Abstract syntax</p>
 <hr /></li>
@@ -155,15 +177,16 @@ triple    := subject predicate object
 subject   := iri | bnode
 predicate := iri
 object    := iri | bnode | literal</code></pre></li>
-<li><p>add new kind of term:</p>
+<li><p>add new kind of term (<code>TRIPLE-TERM</code>):</p>
 <pre><code>graph       := triple*
 triple      := subject predicate object
 subject     := iri | bnode
 predicate   := iri
 object      := iri | bnode | literal | TRIPLE-TERM
 TRIPLE-TERM := triple</code></pre></li>
-<li><p>add new kind of statement in graph</p>
-<pre><code>graph     := (triple | EDGE)*
+<li><p>add new kind of statement (<code>EDGE</code>) in graph and new
+kind of term (<code>NAME</code>):</p>
+<pre><code>graph     := ( triple | EDGE )*
 triple    := subject predicate object
 subject   := iri | bnode
 predicate := iri
@@ -174,48 +197,67 @@ NAME      := iri | bnode</code></pre></li>
 <p>Interpretation</p>
 <hr /></li>
 <li><p>unchanged:</p>
-<pre><code>IR: set of resources
-IP: set of properties
-IS: maps IRIs to IR U IP
-IL: maps literals to IR
-IEXT: maps properties to subsets of IRxIR  </code></pre></li>
+<ul>
+<li><code>IR</code>: set of resources</li>
+<li><code>IP</code>: set of properties</li>
+<li><code>IS</code>: maps IRIs to <code>IR U IP</code></li>
+<li><code>IL</code>: maps literals to <code>IR</code></li>
+<li><code>IEXT</code>: maps properties to subsets of
+<code>IRxIR</code></li>
+</ul></li>
 <li><p>unchanged:</p>
-<pre><code>IR, IP, IS, IL, IEXT as before</code></pre></li>
+<ul>
+<li><code>IR</code>, <code>IP</code>, <code>IS</code>, <code>IL</code>,
+<code>IEXT</code> as before</li>
+</ul></li>
 <li><p>add set for triple terms:</p>
-<pre><code>IR, IP, IS, IL, IEXT as before
-
-IA: set of reification atoms, ⊆ IRxIPxIR</code></pre></li>
+<ul>
+<li><p><code>IR</code>, <code>IP</code>, <code>IS</code>,
+<code>IL</code>, <code>IEXT</code> as before</p></li>
+<li><p><code>IA</code>: set of reification atoms,
+<code>⊆ IRxIPxIR</code></p></li>
+</ul></li>
 <li><p>add map for edges</p>
-<pre><code>IR, IP, IS, IL, IEXT as before
-
-IO: binary relation over IRx(IRxIPxIR)</code></pre></li>
+<ul>
+<li><p><code>IR</code>, <code>IP</code>, <code>IS</code>,
+<code>IL</code>, <code>IEXT</code> as before</p></li>
+<li><p><code>IO</code>: binary relation over
+<code>IRx(IRxIPxIR)</code></p></li>
+</ul></li>
 <li><hr />
 <p>Satisfaction</p>
 <hr /></li>
 <li><p>unchanged:</p>
-<pre><code>[I+A](iri) = IS(iri)
-[I+A](lit) = IL(lit)
-[I+A](bnode) = A(bnode)
-
-[I+A](triple) is true iff
-  ([I+A](subj), [I+A](obj)) in IEXT([I+A](pred))
-
-[I+A](graph) is true unless
-  [I+A](x) is false for some triple x in graph</code></pre></li>
+<ul>
+<li><p><code>[I+A](iri) = IS(iri)</code></p></li>
+<li><p><code>[I+A](lit) = IL(lit)</code></p></li>
+<li><p><code>[I+A](bnode) = A(bnode)</code></p></li>
+<li><p><code>[I+A](triple)</code> is true iff
+<code>([I+A](subj), [I+A](obj))</code> in
+<code>IEXT([I+A](pred))</code></p></li>
+<li><p><code>[I+A](graph)</code> is true unless <code>[I+A](x)</code> is
+false for some triple <code>x</code> in graph</p></li>
+</ul></li>
 <li><p>unchanged:</p>
-<pre><code>[I+A] as before for terms, triples and graphs</code></pre></li>
+<ul>
+<li><code>[I+A]</code> as before for terms, triples, and graphs</li>
+</ul></li>
 <li><p>add interpretation for triple-terms</p>
-<pre><code>[I+A] as before for IRIs, literals, bnodes, triples and graphs
-
-[I+A](triple-term) = ([I+A](subj), [I+A](pred), [I+A](obj)) in IA</code></pre></li>
+<ul>
+<li><p><code>[I+A]</code> as before for IRIs, literals, bnodes, triples,
+and graphs</p></li>
+<li><p><code>[I+A](triple-term) = ([I+A](subj), [I+A](pred), [I+A](obj))</code>
+in <code>IA</code></p></li>
+</ul></li>
 <li><p>add semantic condition for edges</p>
-<pre><code>[I+A] as before for terms and triples
-
-[I+A](edge) is true iff
-  ([I+A](name), ([I+A](subj), [I+A](pred), [I+A](obj))) in IO
-
-[I+A](graph) is true unless
-  [I+A](x) is false for some triple OR EDGE x in graph</code></pre></li>
+<ul>
+<li><p><code>[I+A]</code> as before for terms and triples</p></li>
+<li><p><code>[I+A](edge)</code> is true iff
+<code>([I+A](name), ([I+A](subj), [I+A](pred), [I+A](obj)))</code> in
+<code>IO</code></p></li>
+<li><p><code>[I+A](graph)</code> is true unless <code>[I+A](x)</code> is
+false for some triple <em>OR</em> EDGE <code>x</code> in graph</p></li>
+</ul></li>
 <li><hr />
 <p><a
 href="https://lists.w3.org/Archives/Public/public-rdf-star-wg/2024Jan/0175.html">Supports
@@ -258,14 +300,21 @@ href="https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/">AZ</a></p>
 <li></li>
 <li></li>
 <li><p>add map and properties for triple terms:</p>
-<pre><code>IR, IP, IS, IL, IEXT as before
-
-IT: maps ground triple-terms to IR
-Ps, Pp, Po are elements of IP</code></pre></li>
+<ul>
+<li><p><code>IR</code>, <code>IP</code>, <code>IS</code>,
+<code>IL</code>, <code>IEXT</code> as before</p></li>
+<li><p><code>IT</code>: maps ground triple-terms to
+<code>IR</code></p></li>
+<li><p><code>Ps</code>, <code>Pp</code>, <code>Po</code> are elements of
+<code>IP</code></p></li>
+</ul></li>
 <li><p>add properties for edges</p>
-<pre><code>IR, IP, IS, IL, IEXT as before
-
-Pe, Ps, Pp, Po are elements of IP</code></pre></li>
+<ul>
+<li><p><code>IR</code>, <code>IP</code>, <code>IS</code>,
+<code>IL</code>, <code>IEXT</code> as before</p></li>
+<li><p><code>Pe</code>, <code>Ps</code>, <code>Pp</code>,
+<code>Po</code> are elements of <code>IP</code></p></li>
+</ul></li>
 <li><hr />
 <p>Satisfaction variant <a
 href="https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/">AZ</a></p>
@@ -273,27 +322,35 @@ href="https://www.emse.fr/~zimmermann/W3C/RDF-star-semantics/">AZ</a></p>
 <li></li>
 <li></li>
 <li><p>add interpretation and semantic condition for triple-terms</p>
-<pre><code>[I+A] as before for IRIs, literals, bnodes, triples and graphs
-
-A is defined for blank nodes AND NON-GROUND TRIPLE-TERMS
-
-[I+A](triple-term) = | IT(triple-term) if ground
-                     | A(triple-term)  otherwise
-
-([I+A](triple-term), [I+A](subj)) ∈ IEXT(Ps)
-([I+A](triple-term), [I+A](pred)) ∈ IEXT(Pp)
-([I+A](triple-term), [I+A](obj))  ∈ IEXT(Po)</code></pre></li>
+<ul>
+<li><p><code>[I+A]</code> as before for IRIs, literals, bnodes, triples,
+and graphs</p></li>
+<li><p><code>A</code> is defined for blank nodes <em>AND</em> NON-GROUND
+TRIPLE-TERMS</p></li>
+<li><p><code>[I+A](triple-term) = | IT(triple-term)</code> if
+ground<br />
+<code>                     | A(triple-term)</code> otherwise</p></li>
+<li><p><code>([I+A](triple-term), [I+A](subj)) ∈ IEXT(Ps)</code></p></li>
+<li><p><code>([I+A](triple-term), [I+A](pred)) ∈ IEXT(Pp)</code></p></li>
+<li><p><code>([I+A](triple-term), [I+A](obj))  ∈ IEXT(Po)</code></p></li>
+</ul></li>
 <li><p>add semantic condition for edges</p>
-<pre><code>[I+A] as before for terms and triples
-
-[I+A](edge) is true iff ∃t ∈ IR such that
-  ([I+A](name), t) ∈ IEXT(Pe)
-  (t, [I+A](subj)) ∈ IEXT(Ps)
-  (t, [I+A](pred)) ∈ IEXT(Pp)
-  (t, [I+A](obj))  ∈ IEXT(Po)
-
-[I+A](graph) is true unless
-  [I+A](x) is false for some triple OR EDGE x in graph</code></pre></li>
+<ul>
+<li><p><code>[I+A]</code> as before for terms and triples</p></li>
+<li><p><code>[I+A](edge)</code> is true iff <code>∃t ∈ IR</code> such
+that</p>
+<ul>
+<li><code>([I+A](name), t) ∈ IEXT(Pe)</code></li>
+<li><code>(t, [I+A](subj)) ∈ IEXT(Ps)</code></li>
+<li><code>(t, [I+A](pred)) ∈ IEXT(Pp)</code></li>
+<li><code>(t, [I+A](obj))  ∈ IEXT(Po)</code></li>
+</ul></li>
+<li><p><code>[I+A](graph)</code> is true unless</p>
+<ul>
+<li><code>[I+A](x)</code> is false for some triple <em>OR</em> EDGE
+<code>x</code> in graph</li>
+</ul></li>
+</ul></li>
 </ul>
 </div>
 
