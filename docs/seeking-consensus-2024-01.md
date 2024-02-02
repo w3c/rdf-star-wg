@@ -40,18 +40,18 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
 
 - ```
   :e rdf:subject :s .
-  :e rdf:predicate:p .
+  :e rdf:predicate :p .
   :e rdf:object :o .
   ```
 - ```
   :e rdf:nameOf [
     rdf:subject :s ;
-    rdf:predicate:p ;
+    rdf:predicate :p ;
     rdf:object :o
   ]
   ```
 - ```
-  :e rdf:nameOf <<(:s :p :o)>> .
+  :e rdf:nameOf <<( :s :p :o )>> .
   ```
 - ```
   :e | :s :p :o .
@@ -59,13 +59,38 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
 
 
 - ********************
-  `SELECT (COUNT(*) AS ?c) { ?s ?p ?o }`<br/>over `<<:e | :s :p :o>> :pp :oo .`<br/>results in
+  `SELECT (COUNT(*) AS ?c)`<br />`WHERE { ?s ?p ?o }`<br/>over<br/>`<<:e | :s :p :o>>`<br />`  :pp :oo .`<br/>results in
   ********************
 
 - 4 (or 5 if `:e rdf:type rdf:Statement` is in the result of the expansion as well)
 - 5 (or 6 if `:e rdf:type rdf:Statement` is in the result of the expansion as well)
 - 2
 - 1?
+
+
+- ********************
+  `SELECT *`<br />`WHERE { ?s ?p ?o }`<br/>over<br/>`<<:e | :s :p :o>>`<br />`  :pp :oo .`<br/>results in
+  ********************
+
+- ```
+  :e rdf:subject   :s .
+  :e rdf:predicate :p .
+  :e rdf:object    :o .
+  :e :pp           :oo .
+  ## possibly also
+  ## :e       rdf:type       rdf:Statement .
+  ```
+- ```
+  :e       rdf:nameOf _:blank1
+  _:blank1  rdf:subject   :s .
+  _:blank1  rdf:predicate :p .
+  _:blank1  rdf:object    :o .
+  :e       :pp           :oo .
+  ## possibly also
+  ## :e       rdf:type       rdf:Statement .
+  ```
+- `:e :pp :oo .`<br />`:e rdf:nameOf <<(:s :p :o)>> .`
+- `:e :pp :oo .`
 
 
 - ********************
@@ -88,7 +113,7 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
   predicate := iri
   object    := iri | bnode | literal
   ```
-- add new kind of term:
+- add new kind of term (`TRIPLE-TERM`):
   ```
   graph       := triple*
   triple      := subject predicate object
@@ -97,9 +122,9 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
   object      := iri | bnode | literal | TRIPLE-TERM
   TRIPLE-TERM := triple
   ```
-- add new kind of statement in graph
+- add new kind of statement (`EDGE`) in graph and new kind of term (`NAME`):
   ```
-  graph     := (triple | EDGE)*
+  graph     := ( triple | EDGE )*
   triple    := subject predicate object
   subject   := iri | bnode
   predicate := iri
@@ -114,29 +139,29 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
   ********************
 
 - unchanged:
-  ```
-  IR: set of resources
-  IP: set of properties
-  IS: maps IRIs to IR U IP
-  IL: maps literals to IR
-  IEXT: maps properties to subsets of IRxIR  
-  ```
-- unchanged:
-  ```
-  IR, IP, IS, IL, IEXT as before
-  ```
+  
+  - `IR`: set of resources  
+  - `IP`: set of properties  
+  - `IS`: maps IRIs to `IR U IP`  
+  - `IL`: maps literals to `IR`  
+  - `IEXT`: maps properties to subsets of `IRxIR`  
+
+- unchanged:  
+
+  - `IR`, `IP`, `IS`, `IL`, `IEXT` as before
+
 - add set for triple terms:
-  ```
-  IR, IP, IS, IL, IEXT as before
+  
+  - `IR`, `IP`, `IS`, `IL`, `IEXT` as before  
 
-  IA: set of reification atoms, ⊆ IRxIPxIR
-  ```
+  - `IA`: set of reification atoms, `⊆ IRxIPxIR`
+
 - add map for edges
-  ```
-  IR, IP, IS, IL, IEXT as before
+  
+  - `IR`, `IP`, `IS`, `IL`, `IEXT` as before  
 
-  IO: binary relation over IRx(IRxIPxIR)
-  ```
+  - `IO`: binary relation over `IRx(IRxIPxIR)`
+
 
 
 - ********************
@@ -144,37 +169,37 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
   ********************
 
 - unchanged:
-  ```
-  [I+A](iri) = IS(iri)
-  [I+A](lit) = IL(lit)
-  [I+A](bnode) = A(bnode)
 
-  [I+A](triple) is true iff
-    ([I+A](subj), [I+A](obj)) in IEXT([I+A](pred))
+  - `[I+A](iri) = IS(iri)`
+  - `[I+A](lit) = IL(lit)`
+  - `[I+A](bnode) = A(bnode)`
 
-  [I+A](graph) is true unless
-    [I+A](x) is false for some triple x in graph
-  ```
+  - `[I+A](triple)` is true iff
+    `([I+A](subj), [I+A](obj))` in `IEXT([I+A](pred))`
+
+  - `[I+A](graph)` is true unless
+    `[I+A](x)` is false for some triple `x` in graph
+
 - unchanged:
-  ```
-  [I+A] as before for terms, triples and graphs
-  ```
+
+  - `[I+A]` as before for terms, triples, and graphs
+
 - add interpretation for triple-terms
-  ```
-  [I+A] as before for IRIs, literals, bnodes, triples and graphs
+  
+  - `[I+A]` as before for IRIs, literals, bnodes, triples, and graphs  
 
-  [I+A](triple-term) = ([I+A](subj), [I+A](pred), [I+A](obj)) in IA
-  ```
+  - `[I+A](triple-term) = ([I+A](subj), [I+A](pred), [I+A](obj))` in `IA`
+
 - add semantic condition for edges
-  ```
-  [I+A] as before for terms and triples
 
-  [I+A](edge) is true iff
-    ([I+A](name), ([I+A](subj), [I+A](pred), [I+A](obj))) in IO
+  - `[I+A]` as before for terms and triples
 
-  [I+A](graph) is true unless
-    [I+A](x) is false for some triple OR EDGE x in graph
-  ```
+  - `[I+A](edge)` is true iff
+    `([I+A](name), ([I+A](subj), [I+A](pred), [I+A](obj)))` in `IO`
+
+  - `[I+A](graph)` is true unless
+    `[I+A](x)` is false for some triple _OR_ EDGE `x` in graph
+
 
 
 - ********************
@@ -224,19 +249,18 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
 
 - 
 - 
-- add map and properties for triple terms:
-  ```
-  IR, IP, IS, IL, IEXT as before
+- add map and properties for triple terms:  
 
-  IT: maps ground triple-terms to IR
-  Ps, Pp, Po are elements of IP
-  ```
-- add properties for edges
-  ```
-  IR, IP, IS, IL, IEXT as before
+  - `IR`, `IP`, `IS`, `IL`, `IEXT` as before
 
-  Pe, Ps, Pp, Po are elements of IP
-  ```
+  - `IT`: maps ground triple-terms to `IR`  
+  - `Ps`, `Pp`, `Po` are elements of `IP`
+
+- add properties for edges  
+
+  - `IR`, `IP`, `IS`, `IL`, `IEXT` as before
+
+  - `Pe`, `Ps`, `Pp`, `Po` are elements of `IP`
 
 
 - ********************
@@ -246,31 +270,30 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
 -
 - 
 - add interpretation and semantic condition for triple-terms
-  ```
-  [I+A] as before for IRIs, literals, bnodes, triples and graphs
 
-  A is defined for blank nodes AND NON-GROUND TRIPLE-TERMS
+  - `[I+A]` as before for IRIs, literals, bnodes, triples, and graphs
 
-  [I+A](triple-term) = | IT(triple-term) if ground
-                       | A(triple-term)  otherwise
+  - `A` is defined for blank nodes _AND_ NON-GROUND TRIPLE-TERMS
 
-  ([I+A](triple-term), [I+A](subj)) ∈ IEXT(Ps)
-  ([I+A](triple-term), [I+A](pred)) ∈ IEXT(Pp)
-  ([I+A](triple-term), [I+A](obj))  ∈ IEXT(Po)
-  ```
+  - `[I+A](triple-term) = | IT(triple-term)` if ground  
+    `                     | A(triple-term)`  otherwise
+
+  - `([I+A](triple-term), [I+A](subj)) ∈ IEXT(Ps)`  
+  - `([I+A](triple-term), [I+A](pred)) ∈ IEXT(Pp)`  
+  - `([I+A](triple-term), [I+A](obj))  ∈ IEXT(Po)`
+
 - add semantic condition for edges
-  ```
-  [I+A] as before for terms and triples
 
-  [I+A](edge) is true iff ∃t ∈ IR such that
-    ([I+A](name), t) ∈ IEXT(Pe)
-    (t, [I+A](subj)) ∈ IEXT(Ps)
-    (t, [I+A](pred)) ∈ IEXT(Pp)
-    (t, [I+A](obj))  ∈ IEXT(Po)
+  - `[I+A]` as before for terms and triples
 
-  [I+A](graph) is true unless
-    [I+A](x) is false for some triple OR EDGE x in graph
-  ```
+  - `[I+A](edge)` is true iff `∃t ∈ IR` such that  
+    - `([I+A](name), t) ∈ IEXT(Pe)`  
+    - `(t, [I+A](subj)) ∈ IEXT(Ps)`  
+    - `(t, [I+A](pred)) ∈ IEXT(Pp)`  
+    - `(t, [I+A](obj))  ∈ IEXT(Po)`
+
+  - `[I+A](graph)` is true unless  
+    - `[I+A](x)` is false for some triple _OR_ EDGE `x` in graph
 
 </div>
 
