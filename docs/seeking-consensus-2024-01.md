@@ -39,15 +39,15 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
   ********************
 
 - ```
-  :e rdf:subject :s .
+  :e rdf:subject   :s .
   :e rdf:predicate :p .
-  :e rdf:object :o .
+  :e rdf:object    :o .
   ```
 - ```
   :e rdf:nameOf [
-    rdf:subject :s ;
+    rdf:subject   :s ;
     rdf:predicate :p ;
-    rdf:object :o
+    rdf:object    :o
   ]
   ```
 - ```
@@ -81,15 +81,15 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
   ## :e       rdf:type       rdf:Statement .
   ```
 - ```
-  :e       rdf:nameOf _:blank1
+  :e        rdf:nameOf    _:blank1
   _:blank1  rdf:subject   :s .
   _:blank1  rdf:predicate :p .
   _:blank1  rdf:object    :o .
-  :e       :pp           :oo .
+  :e        :pp           :oo .
   ## possibly also
-  ## :e       rdf:type       rdf:Statement .
+  ## :e        rdf:type       rdf:Statement .
   ```
-- `:e :pp :oo .`<br />`:e rdf:nameOf <<(:s :p :o)>> .`
+- `:e :pp :oo .`<br />`:e rdf:nameOf <<( :s :p :o )>> .`
 - `:e :pp :oo .`
 
 
