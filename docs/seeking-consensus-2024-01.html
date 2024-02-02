@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Seeking Consensus</title>
+  <title>seeking-consensus-2024-01</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -80,9 +80,6 @@
   <link rel="stylesheet" href="seeking-consensus-2024-01.css" />
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Seeking Consensus</h1>
-</header>
 <h1 id="seeking-consensus">Seeking consensus</h1>
 <div class=warning>
 
@@ -184,8 +181,7 @@ subject     := iri | bnode
 predicate   := iri
 object      := iri | bnode | literal | TRIPLE-TERM
 TRIPLE-TERM := triple</code></pre></li>
-<li><p>add new kind of statement (<code>EDGE</code>) in graph and new
-kind of term (<code>NAME</code>):</p>
+<li><p>add new kind of statement (<code>EDGE</code>) in graph:</p>
 <pre><code>graph     := ( triple | EDGE )*
 triple    := subject predicate object
 subject   := iri | bnode

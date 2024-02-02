@@ -122,7 +122,7 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
   object      := iri | bnode | literal | TRIPLE-TERM
   TRIPLE-TERM := triple
   ```
-- add new kind of statement (`EDGE`) in graph and new kind of term (`NAME`):
+- add new kind of statement (`EDGE`) in graph:
   ```
   graph     := ( triple | EDGE )*
   triple    := subject predicate object
