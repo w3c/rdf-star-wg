@@ -27,12 +27,6 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Raggett, Dave
 - Sasaki, Felix
 
-## Never scribed
-- Lindstroom, Niklas 
-- Lörtsch, Thomas
-- Raggett, Dave
-- Sasaki, Felix
-
 ## Already scribed 
 - Alexiev, Vladimir  1x
 - Arndt, Dörthe  4x
@@ -49,9 +43,10 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Thibodeau, Ted  3x
 - Williams, Gregory  4x
 - Zimmermann, Antoine  2x
-- Bremer, Erich 1x
+- Bremer, Erich 2x
 - Raggett, Dave 1x
-
+- Lindstroom, Niklas 1x
+- Lörtsch, Thomas 1x
 
 ## Exempt
 - Ceres, Rémi  
