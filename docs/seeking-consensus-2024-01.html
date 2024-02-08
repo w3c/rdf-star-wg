@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>seeking-consensus-2024-01</title>
+  <title>Seeking Consensus</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -80,6 +80,9 @@
   <link rel="stylesheet" href="seeking-consensus-2024-01.css" />
 </head>
 <body>
+<header id="title-block-header">
+<h1 class="title">Seeking Consensus</h1>
+</header>
 <h1 id="seeking-consensus">Seeking consensus</h1>
 <div class=warning>
 
@@ -120,13 +123,13 @@ href="https://github.com/w3c/rdf-star-wg/blob/main/docs/rdfn-semantics.md">https
 <li><hr />
 <p><code>&lt;&lt;:e | :s :p :o&gt;&gt;</code> expands to</p>
 <hr /></li>
-<li><pre><code>:e rdf:subject :s .
+<li><pre><code>:e rdf:subject   :s .
 :e rdf:predicate :p .
-:e rdf:object :o .</code></pre></li>
+:e rdf:object    :o .</code></pre></li>
 <li><pre><code>:e rdf:nameOf [
-  rdf:subject :s ;
+  rdf:subject   :s ;
   rdf:predicate :p ;
-  rdf:object :o
+  rdf:object    :o
 ]</code></pre></li>
 <li><pre><code>:e rdf:nameOf &lt;&lt;( :s :p :o )&gt;&gt; .</code></pre></li>
 <li><pre><code>:e | :s :p :o .</code></pre></li>
@@ -150,14 +153,14 @@ in</p>
 :e :pp           :oo .
 ## possibly also
 ## :e       rdf:type       rdf:Statement .</code></pre></li>
-<li><pre><code>:e       rdf:nameOf _:blank1
+<li><pre><code>:e        rdf:nameOf    _:blank1
 _:blank1  rdf:subject   :s .
 _:blank1  rdf:predicate :p .
 _:blank1  rdf:object    :o .
-:e       :pp           :oo .
+:e        :pp           :oo .
 ## possibly also
-## :e       rdf:type       rdf:Statement .</code></pre></li>
-<li><p><code>:e :pp :oo .</code><br /><code>:e rdf:nameOf &lt;&lt;(:s :p :o)&gt;&gt; .</code></p></li>
+## :e        rdf:type       rdf:Statement .</code></pre></li>
+<li><p><code>:e :pp :oo .</code><br /><code>:e rdf:nameOf &lt;&lt;( :s :p :o )&gt;&gt; .</code></p></li>
 <li><p><code>:e :pp :oo .</code></p></li>
 <li><hr />
 <p>Abstract syntax</p>
