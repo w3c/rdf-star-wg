@@ -17,10 +17,10 @@ pandoc seeking-consensus-2024-01.md -f gfm -o seeking-consensus-2024-01.html -s 
   Approaches
   ********************
   
-- sugar
-- sugar+
-- triple-terms / descriptors
-- edge statements / RDFn
+- 1. sugar
+- 2. sugar+
+- 3. triple-terms / descriptors
+- 4. edge statements / RDFn
 
 - ********************
   Source
