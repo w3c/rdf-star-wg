@@ -1,0 +1,99 @@
+<h1 id="rdf-star-semantics-option-3">RDF-star semantics: option 3</h1>
+<h1 id="-draft-2024-02-16-">(DRAFT 2024.02.16)</h1>
+<p><p>
+<strong>How to read</strong> <br/>
+The following without the blue and red parts is RDF 1.1.<br/>
+The following without the red parts is <em>option 3</em>.<br/>
+The red parts introduce the direct semantics of the <code>tripleOccurrence</code> macro. <br/>
+The well-formedness condition guarantees the equivalence of <code>rdf:nameOf</code> triples with the <code>tripleOccurrence</code> macro.</p>
+<h2 id="abstract-syntax-">ABSTRACT SYNTAX:</h2>
+<pre><code>graph            ::= (triple)* 
+triple           ::= subject predicate object 
+subject          ::= iri | BlankNode | 
+                     tripleTerm | tripleOccurrence 
+predicate        ::= iri 
+object           ::= term 
+term             ::= iri | BlankNode | literal | 
+                     tripleTerm | tripleOccurrence 
+tripleTerm       ::= triple
+tripleOccurrence ::= identifier triple
+identifier       ::= iri | BlankNode  
+</code></pre><p><strong>Note:</strong><br/>
+A <em>term</em> is denoted by <code>r</code>, a <em>triple</em> by <code>t</code>, and a <em>graph</em> by <code>g</code>.<br/>
+Given a <em>tripleOccurrence</em> <code>r</code>, we denote the identifier of <code>r</code> as <code>r.id</code>, and the subject, predicate, object of <code>r</code> as <code>r.s</code>, <code>r.p</code>, <code>r.o</code>, respectively.<br/>
+Given a <em>triple</em> <code>t</code>, we denote the subject, predicate, object of <code>t</code> as <code>t.s</code>, <code>t.p</code>, <code>t.o</code>, respectively.<br/>
+RDF 1.1 syntax is the above without the <em>tripleTerm</em> and <em>tripleOccurrence</em> categories.</p>
+<p><strong>Proposed well-formedness condition</strong> <br/>
+A <em>tripleTerm</em> can only appear as an object of a <code>rdf:nameOf</code> triple.</p>
+<h2 id="semantics-">SEMANTICS:</h2>
+<p>An RDF-star simple interpretation <code>I</code> is a structure &lt;<code>IR</code>, <code>IP</code>, <code>IS</code>, <code>IL</code>, <code>IEXT</code>, <code>IT</code><span style="color:blue;">, <code>ID</code></span>&gt; consisting of:</p>
+<ol>
+<li>A non-empty set <code>IR</code> of <em>resources</em>, called the domain or universe of <code>I</code>.</li>
+<li>A set <code>IP</code>, called the set of <em>properties</em> of <code>I</code>.</li>
+<li>A mapping <code>IS</code> from IRIs into <code>IR ⋃ IP</code>, called the <em>interpretation</em> of IRIs.</li>
+<li>A partial mapping <code>IL</code> from <em>literal</em> into <code>IR</code>, called the <em>interpretation</em> of literals.</li>
+<li>A mapping <code>IEXT</code> from <code>IP</code> into <code>2<sup>IR x IR</sup></code>, called the <em>extension</em> of properties.</li>
+<li><span style="color:blue;">A mapping <code>ID</code> from <code>(IR x IP x IR)</code> into <code>IR</code>, called the <em>description</em> of triple terms.</span></li>
+</ol>
+<p><code>A</code> is a mapping from <em>BlankNode</em> to <code>IR</code>.</p>
+<p>
+
+<p>Given <code>I</code> and <code>A</code>, the function <code>[I+A](.)</code> is defined over <em>terms</em>, <em>triples</em>, and <em>graphs</em> as follows.</p>
+<ul>
+<li><code>[I+A](r) = IS(r)</code>    if <code>r</code> is a <em>iri</em></li>
+<li><code>[I+A](r) = IL(r)</code>    if <code>r</code> is a <em>literal</em></li>
+<li><span style="color:blue;"><code>[I+A](r) = ID(&lt;[I+A](t.s).[I+A](t.p),[I+A](t.o)&gt;)</code>    if <code>r</code> is a <em>tripleTerm</em> </span></li>
+<li><span style="color:red;"><code>[I+A](r) = [I+A](r.id)</code>    if <code>r</code> is a <em>tripleOccurrence</em></span></li>
+<li><code>[I+A](r) = A<sub></sub>(r)</code>     if <code>r</code> is a <em>BlankNode</em></li>
+</ul>
+<p>
+
+<ul>
+<li><code>[I+A](t) = TRUE</code> if and only if </br>
+  <code>&lt;[I+A](t.s),[I+A](t.o)&gt; ∈ IEXT(<a href="t.p">I+A\</a>)</code> <span style="color:red;">and</span><ul>
+<li><span style="color:red;"><code>&lt;[I+A](ts.id), &lt;[I+A](ts.s),[I+A](ts.p),[I+A](ts.o)&gt;&gt; ∈ [I+A](rdf:nameOf)</code> <br/>
+if <code>t.s</code> is a <em>tripleOccurrence</em> <code>ts</code></span></li>
+<li><span style="color:red;"><code>&lt;[I+A](to.id), &lt;[I+A](to.s),[I+A](to.p),[I+A](to.o)&gt;&gt; ∈ [I+A](rdf:nameOf)</code>
+<br/> if <code>t.o</code> is a <em>tripleOccurrence</em> <code>to</code></span></li>
+</ul>
+</li>
+</ul>
+<p>
+
+<ul>
+<li><code>[I+A](g) = TRUE</code> if and only if <code> ∀ t ∈ g . [I+A](t) = TRUE</code></li>
+</ul>
+<p>An interpretation <code>I</code> is called a <em>model</em> of a graph <code>g</code> if there exists <code>A</code> such that <code>[I+A](g) = TRUE</code>.<br/>
+The set of all models of a graph <code>g</code> is called <code>models(g)</code>.</p>
+<p>Simple entailment: <code>g ⊨ g&#39;</code> if and only if <code>models(g) ⊆ models(g&#39;)</code>.</p>
+<p><strong>Note:</strong><br/>
+RDF 1.1 semantics is exactly the above without the <span style="color:blue;">blue</span> and <span style="color:red;">red</span> parts.<br/>
+A review of the standard semantics of RDF 1.0: <a href="https://github.com/w3c/rdf-star-wg/files/11849881/semantics.of.RDF.pdf">semantics of RDF.pdf</a>.</p>
+<h2 id="example-cases-in-concrete-syntax-">EXAMPLE CASES IN CONCRETE SYNTAX:</h2>
+<pre><code>&lt;&lt; <span class="hljs-symbol">:wed-</span><span class="hljs-number">1</span> | <span class="hljs-symbol">:liz</span> <span class="hljs-symbol">:spouse</span> <span class="hljs-symbol">:richard</span> &gt;&gt;
+ <span class="hljs-symbol">:starts</span> <span class="hljs-number">1964</span> .
+</code></pre><p>The above entails:</p>
+<pre><code><span class="hljs-meta">:wed-1 rdf:nameOf</span> &lt;&lt;(:liz :spouse :richard)&gt;&gt; .
+<span class="hljs-meta">:wed-1 :starts</span> 1964 .
+</code></pre><p>More examples:</p>
+<pre><code>&lt;&lt; <span class="hljs-symbol">_:</span>bp1-<span class="hljs-number">23</span> | <span class="hljs-symbol">:book1</span> <span class="hljs-symbol">:datePublished</span> <span class="hljs-number">2023</span> &gt;&gt; 
+  a <span class="hljs-symbol">:PublicationEvent</span> .
+&lt;&lt; <span class="hljs-symbol">_:</span>bp1-<span class="hljs-number">23</span> | <span class="hljs-symbol">:book1</span> <span class="hljs-symbol">:publisher</span> <span class="hljs-symbol">:p1</span> &gt;&gt; 
+  <span class="hljs-symbol">:location</span> <span class="hljs-symbol">:London</span> .
+</code></pre><p>&nbsp;</p>
+<pre><code><span class="hljs-meta">:john :believes</span> 
+<span class="hljs-code"> &lt;&lt; :s1 | &lt;&lt; [] | :liz :spouse :richard &gt;&gt; </span>
+<span class="hljs-code">           :starts 1964 &gt;&gt; .</span>
+<span class="hljs-meta">:s1 :certified-by</span> :us-census .
+<span class="hljs-meta">:paul :believes</span> 
+<span class="hljs-code"> &lt;&lt; :s2 | &lt;&lt; [] | :liz :spouse :richard &gt;&gt; </span>
+<span class="hljs-code">           :starts 1965 &gt;&gt; .</span>
+</code></pre><h3 id="shortcuts-in-concrete-syntax-">Shortcuts in concrete syntax:</h3>
+<ul>
+<li>Triple term shortcut: <code>&lt;&lt; :s :p :o &gt;&gt;</code>  ➡️ <br/>
+<code>&lt;&lt; [] | :s :p :o &gt;&gt;</code></li>
+<li>Annotation shortcut: 
+<code>:s :p :o {| :id | :p1 o1; :p2 o2 |} .</code>  ➡️ <br/>
+<code>&lt;&lt; :id | :s :p :o &gt;&gt; :p1 o1; :p2 o2 .</code><br/>
+<code>:s :p :o .</code></li>
+</ul>
