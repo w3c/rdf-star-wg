@@ -6,9 +6,6 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 
 (scribing counters calculated from minutes)
 
-
-
-- Lörtsch, Thomas
 - Seaborne, Andy
 - Kellogg, Gregg
 - Bremer, Erich
@@ -27,6 +24,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Patel-Schneider, Peter
 - Gschwend, Adrian
 - Lindstroom, Niklas
+- Lörtsch, Thomas
 
 
 ## Already scribed 
@@ -48,7 +46,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Bremer, Erich 2x
 - Raggett, Dave 1x
 - Lindstroom, Niklas 2x
-- Lörtsch, Thomas 1x
+- Lörtsch, Thomas 2x
 
 ## Exempt
 - Ceres, Rémi  
