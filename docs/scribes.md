@@ -8,8 +8,8 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 
 - Haudebourg, Timothée
 - Champin, Pierre-Antoine
-- Bremer, Erich
 - Williams, Gregory
+- Bremer, Erich
 - Raggett, Dave
 - Sasaki, Felix
 - Taelman, Ruben
