@@ -5,8 +5,6 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 ## Next up
 
 (scribing counters calculated from minutes)
-
-- Haudebourg, Timothée
 - Champin, Pierre-Antoine
 - Williams, Gregory
 - Bremer, Erich
@@ -35,11 +33,11 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Gschwend, Adrian  12x
 - Hartig, Olaf  6x
 - Haudebourg, Timothée  3x
-- Kellogg, Gregg  14x
+- Kellogg, Gregg  15x
 - Lassila, Ora  2x
 - Patel-Schneider, Peter  7x
 - Pellissier Tanon, Thomas  3x
-- Seaborne, Andy  13x
+- Seaborne, Andy  14x
 - Taelman, Ruben  4x
 - Thibodeau, Ted  4x
 - Williams, Gregory  4x
@@ -67,4 +65,5 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Troncy, Raphaël
 - Zappa, Achille
 - Alexiev, Vladimir (was there briefly but didn't show up anymore)
+- Haudebourg, Timothée (was there briefly but didn't show up anymore)
 
