@@ -30,9 +30,15 @@ The first restriction focuses on where triple terms may be used within an RDF gr
 
 The following definitions capture the notion of triple-term-subject well-formedness formally (first within the context of individual triple terms and individual RDF triples, and thereafter for whole RDF graphs).
 
-**Definition:** A triple term (*s*, *p*, *o*) is **triple-term-subject well-formed** if *s* is a not a triple term.
+**Definition:** A triple term (*s*, *p*, *o*) is **triple-term-subject well-formed** if it has both of the following two properties:
 
-**Definition:** An RDF triple (*s*, *p*, *o*) is **triple-term-subject well-formed** if *s* is a not a triple term.
+1. *s* is a not a triple term, and
+2. if *o* is a triple term, then *o* is triple-term-subject well-formed.
+
+**Definition:** An RDF triple (*s*, *p*, *o*) is **triple-term-subject well-formed** if it has both of the following two properties:
+
+1. *s* is a not a triple term, and
+2. if *o* is a triple term, then *o* is triple-term-subject well-formed.
 
 **Definition:** An RDF Graph *G* is **triple-term-subject well-formed** if every triple in *G* is triple-term-subject well-formed.
 
