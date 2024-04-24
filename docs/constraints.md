@@ -50,7 +50,7 @@ Formally, triple-term-object well-formedness is defined recursively as follows (
 
 Notice that both, triple-term-subject well-formedness and triple-term-object well-formedness, focus solely on triple terms and do not restrict the usage of the `rdf:reifies` as an arbitrary predicate. The restriction in this section can be seen as a counterpart to these two notions of well-formedness; that is, it does not restrict the usage of triple terms but, instead, it restricts the usage of `rdf:reifies` as a predicate.
 
-Informally, the restriction is that `rdf:reifies` may be used as a predicate only in triples in which the object is a triple and the subject is not. Formally, this restriction is defined recursively as follows.
+Informally, the restriction is that `rdf:reifies` may be used as a predicate only in triples in which the object is a triple and the subject is not. Formally, this restriction is defined recursively as follows:
 
 **Definition:** An RDF triple (*s*, *p*, *o*) is **reifies-predicate well-formed** if it has one of the following two properties:
 
@@ -68,12 +68,12 @@ The previous three notions of well-formedness focus on how triple terms and `rdf
 
 without any other triple that talks about *s*. I believe that some members of the WG consider a notion of well-formedness in which such graphs are indeed disallowed. As a means to talk about this particular aspect of well-formedness, I introduce the notion of *reifier minimality* as another (syntactic) property of RDF graphs. Informally, an RDF graph is reifier minimal if, for every triple of the aforementioned form, the graph contains another triple that talks about *s*. Formally, this property is defined as follows.
 
-**Definition:** An RDF Graph *G* is **reifier minimal** if, for every triple (*s*, *p*, *o*) in *G*, it holds that, if *p* is the IRI `rdf:reifies` and *o* is a triple, then there is another triple (*s2*, *p2*, *o2*) in *G* such that *p2* is not the IRI `rdf:reifies` and either *s* and *s2* are the same RDF term or *s* and *o2* are the same RDF term.
+**Definition:** An RDF Graph *G* is **reifier minimal** if, for every triple (*s*, *p*, *o*) in *G*, it holds that, if *p* is the IRI `rdf:reifies` and *o* is a triple, then there is another triple (*s2*, *p2*, *o2*) in *G* such that *p2* is not the IRI `rdf:reifies` and either *s* and *s2*, or *s* and *o2*, are the same RDF term.
 
 
 # No Multi-Term Reification
 
-The last syntactic property focuses on the question whether a reifier may be associated with multiple triples. We may refer to cases in which a reifier is indeed associated with multiple triples as *multi-term reification*. The following two triples illustrate such a multi-term reification (assuming (*s*, *p*, *o*) and (*s'*, *p'*, *o'*) are two different triples).
+The last syntactic property focuses on the question of whether a reifier may be associated with multiple triples. We may refer to cases in which a reifier is indeed associated with multiple triples as *multi-term reification*. The following two triples illustrate such a multi-term reification (assuming (*s*, *p*, *o*) and (*s'*, *p'*, *o'*) are two different triples):
 
 * (*x*, `rdf:reifies`, (*s*, *p*, *o*) )
 * (*x*, `rdf:reifies`, (*s'*, *p'*, *o'*) )
