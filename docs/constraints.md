@@ -32,13 +32,13 @@ The following definitions capture the notion of triple-term-subject well-formedn
 
 **Definition:** A triple term (*s*, *p*, *o*) is **triple-term-subject well-formed** if it has both of the following two properties:
 
-1. *s* is a not a triple term, and
-2. if *o* is a triple term, then *o* is triple-term-subject well-formed.
+* *s* is a not a triple term
+* *o* is a triple term
 
 **Definition:** An RDF triple (*s*, *p*, *o*) is **triple-term-subject well-formed** if it has both of the following two properties:
 
-1. *s* is a not a triple term, and
-2. if *o* is a triple term, then *o* is triple-term-subject well-formed.
+* *s* is a not a triple term
+* *o* is a triple term
 
 **Definition:** An RDF Graph *G* is **triple-term-subject well-formed** if every triple in *G* is triple-term-subject well-formed.
 
@@ -49,15 +49,15 @@ Another possible restriction regarding the usage of triple terms is that a tripl
 
 Formally, triple-term-object well-formedness is defined recursively as follows (again, first for individual triple terms and individual triples, and thereafter for whole graphs).
 
-**Definition:** A triple term (*s*, *p*, *o*) is **triple-term-object well-formed** if it has one of the following two properties:
+**Definition:** A triple term (*s*, *p*, *o*) is **triple-term-object well-formed** if it has either of the following two properties:
 
-1. *o* is a not a triple term,
-2. *o* is a triple term that is triple-term-object well-formed and *p* is the IRI `rdf:reifies`.
+* *o* is a not a triple term
+* *o* is a triple term that is triple-term-object well-formed and *p* is the IRI `rdf:reifies`
 
-**Definition:** An RDF triple (*s*, *p*, *o*) is **triple-term-object well-formed** if it has one of the following two properties:
+**Definition:** An RDF triple (*s*, *p*, *o*) is **triple-term-object well-formed** if it has either of the following two properties:
 
-1. *o* is a not a triple term,
-2. *o* is a triple term that is triple-term-object well-formed and *p* is the IRI `rdf:reifies`.
+* *o* is a not a triple term
+* *o* is a triple term that is triple-term-object well-formed and *p* is the IRI `rdf:reifies`
 
 **Definition:** An RDF Graph *G* is **triple-term-object well-formed** if every triple in *G* is triple-term-object well-formed.
 
@@ -68,15 +68,15 @@ Notice that both, triple-term-subject well-formedness and triple-term-object wel
 
 Informally, the restriction is that `rdf:reifies` may be used as a predicate only in triples in which the object is a triple term and the subject is not. Formally, this restriction is defined recursively as follows.
 
-**Definition:** A triple term (*s*, *p*, *o*) is **reifies-predicate well-formed** if it has one of the following two properties:
+**Definition:** A triple term (*s*, *p*, *o*) is **reifies-predicate well-formed** if it has either of the following two properties:
 
-1. *p* is a not the IRI `rdf:reifies`,
-2. *p* is the IRI `rdf:reifies`, *s* is a not a triple term, and *o* is a triple term that is reifies-predicate well-formed.
+* *p* is a not the IRI `rdf:reifies`
+* *p* is the IRI `rdf:reifies`, *s* is a not a triple term, and *o* is a triple term that is reifies-predicate well-formed
 
-**Definition:** An RDF triple (*s*, *p*, *o*) is **reifies-predicate well-formed** if it has one of the following two properties:
+**Definition:** An RDF triple (*s*, *p*, *o*) is **reifies-predicate well-formed** if it has either of the following two properties:
 
-1. *p* is a not the IRI `rdf:reifies`,
-2. *p* is the IRI `rdf:reifies`, *s* is a not a triple term, and *o* is a triple term that is reifies-predicate well-formed.
+* *p* is a not the IRI `rdf:reifies`
+* *p* is the IRI `rdf:reifies`, *s* is a not a triple term, and *o* is a triple term that is reifies-predicate well-formed
 
 **Definition:** An RDF Graph *G* is **reifies-predicate well-formed** if every triple in *G* is reifies-predicate well-formed.
 
@@ -94,15 +94,15 @@ without any other triple that talks about *s*. I believe that some members of th
 
 # No Multi-Term Reification
 
-The last syntactic property focuses on the question whether a reifier may be associated with multiple triple terms. We may refer to cases in which a reifier is indeed associated with multiple triple terms as *multi-term reification*. The following two triples illustrate such a multi-term reification (assuming (*s*, *p*, *o*) and (*s'*, *p'*, *o'*) are two different triple terms).
+The last syntactic property focuses on the question whether a reifier may be associated with multiple triple terms. We may refer to cases in which a reifier is indeed associated with multiple triple terms as *multi-term reification*. The following two triples illustrate such a multi-term reification (assuming (*s*, *p*, *o*) and (*s'*, *p'*, *o'*) are two different triple terms):
 
 * (*x*, `rdf:reifies`, (*s*, *p*, *o*) )
 * (*x*, `rdf:reifies`, (*s'*, *p'*, *o'*) )
 
 Some members of the WG argue for a notion of well-formedness in which RDF graphs are free of multi-term reifications. Formally, this property is defined as follows.
 
-**Definition:** An RDF Graph *G* is **multi-term-reification free** if no pair of triples (*s1*, *p1*, *o1*) and (*s2*, *p2*, *o2*) in *G* has all of the following properties.
+**Definition:** An RDF Graph *G* is **multi-term-reification free** if no pair of triples (*s1*, *p1*, *o1*) and (*s2*, *p2*, *o2*) in *G* has all of the following properties:
 
-1. *s1* and *s2* are the same RDF term
-2. *p1* and *p2* both are the IRI `rdf:reifies`
-3. *o1* and *o2* are two different triple terms
+* *s1* and *s2* are the same RDF term
+* *p1* and *p2* both are the IRI `rdf:reifies`
+* *o1* and *o2* are two different triple terms
