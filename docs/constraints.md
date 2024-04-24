@@ -24,28 +24,41 @@ The definitions in this document consider a version of the abstract data model o
 **Note:** While, syntactically, the notion of an RDF triple and the notion of a triple term are the same, they represent different concepts. RDF triples are the members of RDF graphs, whereas triple terms can be used as components of RDF triples.
 
 
-# Triple-Term-Placement Well-Formedness
+# Triple-Term-Subject Well-Formedness
 
-The first restriction focuses on where triple terms may be used within an RDF graph and, by extension, within one another. Informally, by this restriction, triple terms may only be used as objects, in combination with the IRI `rdf:reifies` as predicate. RDF graphs that abide by this restriction are said to be *triple-term-placement well-formed*. Notice that this notion of well-formedness may be only one of several conditions combined into the notion of well-formedness that the WG is going to define.
+The first restriction focuses on where triple terms may be used within an RDF graph and, by extension, within one another. Informally, by this restriction, triple terms may only be used as objects. RDF graphs that abide by this restriction are said to be *triple-term-subject well-formed*. Notice that this notion of well-formedness may be only one of several conditions combined into the notion of well-formedness that the WG is going to define. Alternatively, it may also be an option to integrate the restriction captured by triple-term-subject well-formedness directly into the definitions of RDF triples and triple terms (i.e., changing these definitions by removing the option for a triple term in the subject position altogether).
 
-The following definitions capture the notion of triple-term-placement well-formedness formally (first within the context of individual triple terms and individual RDF triples, and thereafter for whole RDF graphs).
+The following definitions capture the notion of triple-term-subject well-formedness formally (first within the context of individual triple terms and individual RDF triples, and thereafter for whole RDF graphs).
 
-**Definition:** A triple term (*s*, *p*, *o*) is **triple-term-placement well-formed** if it has one of the following two properties:
+**Definition:** A triple term (*s*, *p*, *o*) is **triple-term-subject well-formed** if *s* is a not a triple term.
 
-1. *s* is a not a triple term, and neither is *o*,
-2. *s* is a not a triple term, *p* is the IRI `rdf:reifies`, and *o* is a triple term that is triple-term-placement well-formed.
+**Definition:** An RDF triple (*s*, *p*, *o*) is **triple-term-subject well-formed** if *s* is a not a triple term.
 
-**Definition:** An RDF triple (*s*, *p*, *o*) is **triple-term-placement well-formed** if it has one of the following two properties:
+**Definition:** An RDF Graph *G* is **triple-term-subject well-formed** if every triple in *G* is triple-term-subject well-formed.
 
-1. *s* is a not a triple term, and neither is *o*,
-2. *s* is a not a triple term, *p* is the IRI `rdf:reifies`, and *o* is a triple term that is triple-term-placement well-formed.
 
-**Definition:** An RDF Graph *G* is **triple-term-placement well-formed** if every triple in *G* is triple-term-placement well-formed.
+# Triple-Term-Object Well-Formedness
+
+Another possible restriction regarding the usage of triple terms is that a triple term may be used as an object only in combination with the IRI `rdf:reifies` as predicate. RDF graphs that abide by this restriction are said to be *triple-term-object well-formed* and, again, this notion of well-formedness may be only one of several conditions combined into the notion of well-formedness that the WG is going to define.
+
+Formally, triple-term-object well-formedness is defined recursively as follows (again, first for individual triple terms and individual triples, and thereafter for whole graphs).
+
+**Definition:** A triple term (*s*, *p*, *o*) is **triple-term-object well-formed** if it has one of the following two properties:
+
+1. *o* is a not a triple term,
+2. *o* is a triple term that is triple-term-object well-formed and *p* is the IRI `rdf:reifies`.
+
+**Definition:** An RDF triple (*s*, *p*, *o*) is **triple-term-object well-formed** if it has one of the following two properties:
+
+1. *o* is a not a triple term,
+2. *o* is a triple term that is triple-term-object well-formed and *p* is the IRI `rdf:reifies`.
+
+**Definition:** An RDF Graph *G* is **triple-term-object well-formed** if every triple in *G* is triple-term-object well-formed.
 
 
 # Reifies-Predicate Well-Formedness
 
-Notice that the notion of triple-term-placement well-formedness focuses solely on triple terms and does not restrict the usage of the `rdf:reifies` as an arbitrary predicate. The restriction in this section can be seen as a counterpart to triple-term-placement well-formedness; that is, it does not restrict the usage of triple terms but, instead, it restricts the usage of `rdf:reifies` as a predicate.
+Notice that both, triple-term-subject well-formedness and triple-term-object well-formedness, focus solely on triple terms and do not restrict the usage of the `rdf:reifies` as an arbitrary predicate. The restriction in this section can be seen as a counterpart to these two notions of well-formedness; that is, it does not restrict the usage of triple terms but, instead, it restricts the usage of `rdf:reifies` as a predicate.
 
 Informally, the restriction is that `rdf:reifies` may be used as a predicate only in triples in which the object is a triple term and the subject is not. Formally, this restriction is defined recursively as follows.
 
@@ -64,7 +77,7 @@ Informally, the restriction is that `rdf:reifies` may be used as a predicate onl
 
 # Reifier Minimality
 
-The previous two notions of well-formedness focus on how triple terms and `rdf:reifies` predicates can be used in RDF graphs, respectively. They do not disallow RDF graphs that contain a triple of the form
+The previous three notions of well-formedness focus on how triple terms and `rdf:reifies` predicates can be used in RDF graphs, respectively. They do not disallow RDF graphs that contain a triple of the form
 
 (*s*, `rdf:reifies`, (*s'*, *p'*, *o'*) )
 
