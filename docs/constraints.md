@@ -19,6 +19,7 @@ The definitions in this document consider a version of the abstract data model o
 * If *s* is an IRI or a blank node, *p* is an IRI, and *o* is an IRI, a blank node, or a literal, then (*s*, *p*, *o*) is a triple term.
 * If *s* is an IRI or a blank node, *p* is an IRI, and *o* is a triple term, then (*s*, *p*, *o*) is a triple term.
 * If *s* is a triple term, *p* is an IRI, and *o* is an IRI, a blank node, or a literal, then (*s*, *p*, *o*) is a triple term.
+* If *s* is a triple term, *p* is an IRI, and *o* is a triple term, then (*s*, *p*, *o*) is a triple term.
 
 **Note:** While, syntactically, the notion of an RDF triple and the notion of a triple term are the same, they represent different concepts. RDF triples are the members of RDF graphs, whereas triple terms can be used as components of RDF triples.
 
