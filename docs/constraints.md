@@ -27,7 +27,7 @@ The following definitions capture the notion of triple-term-subject well-formedn
 **Definition:** An RDF triple (*s*, *p*, *o*) is **triple-term-subject well-formed** if it has both of the following two properties:
 
 * *s* is a not an RDF triple
-* if *o* is an RDF triple, then *o* is triple-term-subject well-formed
+* either *o* is not an RDF triple or *o* is an RDF triple that is itself triple-term-subject well-formed
 
 **Definition:** An RDF Graph *G* is **triple-term-subject well-formed** if every triple in *G* is triple-term-subject well-formed.
 
