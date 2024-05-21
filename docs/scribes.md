@@ -20,15 +20,15 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Kellogg, Gregg
 - Seaborne, Andy
 - Lassila, Ora
-- Champin, Pierre-Antoine
 - Williams, Gregory
 - Bremer, Erich
+- Champin, Pierre-Antoine
 
 
 ## Already scribed 
 - Alexiev, Vladimir  1x
 - Arndt, Dörthe  5x
-- Champin, Pierre-Antoine  21x
+- Champin, Pierre-Antoine  22x
 - Gschwend, Adrian  12x
 - Hartig, Olaf  6x
 - Haudebourg, Timothée  3x
