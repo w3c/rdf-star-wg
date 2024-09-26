@@ -10,7 +10,6 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Zimmermann, Antoine
 - Taelman, Ruben
 - Sasaki, Felix
-- Pellissier Tanon, Thomas
 - Arndt, Dörthe
 - Patel-Schneider, Peter
 - Thibodeau, Ted
@@ -24,6 +23,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Bremer, Erich
 - Gschwend, Adrian
 - Champin, Pierre-Antoine
+- Pellissier Tanon, Thomas
 
 ## Already scribed 
 - Alexiev, Vladimir  1x
