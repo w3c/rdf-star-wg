@@ -9,33 +9,33 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Raggett, Dave
 - Zimmermann, Antoine
 - Taelman, Ruben
-- Sasaki, Felix
 - Arndt, Dörthe
-- Patel-Schneider, Peter
 - Thibodeau, Ted
 - Lindstroom, Niklas
 - Lörtsch, Thomas
-- Hartig, Olaf
-- Kellogg, Gregg
 - Seaborne, Andy
 - Lassila, Ora
 - Williams, Gregory
 - Bremer, Erich
 - Gschwend, Adrian
 - Champin, Pierre-Antoine
+- Kellogg, Gregg
 - Pellissier Tanon, Thomas
+- Patel-Schneider, Peter
+- Sasaki, Felix
+- Hartig, Olaf
 
 ## Already scribed 
 - Alexiev, Vladimir  1x
 - Arndt, Dörthe  6x
 - Champin, Pierre-Antoine  22x
 - Gschwend, Adrian  14x
-- Hartig, Olaf  7x
+- Hartig, Olaf  8x
 - Haudebourg, Timothée  3x
-- Kellogg, Gregg  16x
+- Kellogg, Gregg  17x
 - Lassila, Ora  2x
-- Patel-Schneider, Peter  8x
-- Pellissier Tanon, Thomas  3x
+- Patel-Schneider, Peter  9x
+- Pellissier Tanon, Thomas  4x
 - Seaborne, Andy  15x
 - Taelman, Ruben  5x
 - Thibodeau, Ted  5x
@@ -45,7 +45,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Raggett, Dave 2x
 - Lindstroom, Niklas 3x
 - Lörtsch, Thomas 3x
-- Sasaki, Felix 1x
+- Sasaki, Felix 2x
 
 
 ## Exempt
