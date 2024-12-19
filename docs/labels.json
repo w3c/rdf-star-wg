@@ -133,8 +133,8 @@
   },
   {
     "name": "spec:bug",
-    "color": "ba39ce",
-    "description": "Bug in the specification",
+    "color": "aaaa22",
+    "description": "Change fixing a bug in the specification (class 3) –see also spec:substantive",
     "default": false
   },
   {
@@ -145,14 +145,20 @@
   },
   {
     "name": "spec:editorial",
-    "color": "58820a",
-    "description": "Minor issue or proposed change in the specification (markup, typo, informative text)",
+    "color": "2222aa",
+    "description": "Minor change in the specification (markup, typo, informative text; class 1 or 2)",
+    "default": false
+  },
+  {
+    "name": "spec:new-feature",
+    "color": "aa2222",
+    "description": "Change adding new functionality (class 4)",
     "default": false
   },
   {
     "name": "spec:enhancement",
-    "color": "c11537",
-    "description": "Issue or proposed change to enhance the spec without changing the normative content substantively",
+    "color": "22aa22",
+    "description": "Change to enhance the spec without affecting conformance (class 2) –see also spec:editorial",
     "default": false
   },
   {
@@ -169,8 +175,8 @@
   },
   {
     "name": "spec:substantive",
-    "color": "cff9a4",
-    "description": "Issue or proposed change in the spec that changes its normative content",
+    "color": "aaaa22",
+    "description": "Change in the spec affecting its normative content (class 3) –see also spec:bug, spec:new-feature",
     "default": false
   },
   {
