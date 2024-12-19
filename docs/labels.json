@@ -184,5 +184,113 @@
     "color": "2bafa2",
     "description": "Issue on the specification that Working Group will not address",
     "default": false
+  },
+  {
+    "name": "tag-needs-resolution",
+    "color": "7fff00",
+    "default": false,
+    "description": "Issue the Technical Architecture Group has raised and looks for a response on."
+  },
+  {
+    "name": "tag-tracker",
+    "color": "7fff00",
+    "default": false,
+    "description": "Group bringing to attention of the TAG, or tracked by the TAG but not needing response."
+  },
+  {
+    "name": "test:missing-coverage",
+    "color": "ed2fc4",
+    "default": false,
+    "description": "Test-suite related: missing coverage"
+  },
+  {
+    "name": "test:needs implementation",
+    "color": "e4c2f9",
+    "default": false,
+    "description": "Test suite related: missing implementation"
+  },
+  {
+    "name": "test:needs tests",
+    "color": "e587ca",
+    "default": false,
+    "description": "Test suite related: missing test"
+  },
+  {
+    "name": "wr:commenter-agreed",
+    "color": "5ce060",
+    "default": false,
+    "description": "Wide review management"
+  },
+  {
+    "name": "wr:commenter-agreed-partial",
+    "color": "bb1bd3",
+    "default": false,
+    "description": "Wide review management"
+  },
+  {
+    "name": "wr:commenter-no-response",
+    "color": "a9f9e5",
+    "default": false,
+    "description": "Wide review management"
+  },
+  {
+    "name": "wr:commenter-rejected",
+    "color": "8fd85b",
+    "default": false,
+    "description": "Wide review management"
+  },
+  {
+    "name": "wr:open",
+    "color": "f7bbd1",
+    "default": false,
+    "description": "Wide review management"
+  },
+  {
+    "name": "wr:pending",
+    "color": "bbf76c",
+    "default": false,
+    "description": "Wide review management"
+  },
+  {
+    "name": "wr:rejected",
+    "color": "43b21a",
+    "default": false,
+    "description": "Wide review management"
+  },
+  {
+    "name": "wr:resolved",
+    "color": "0a3c82",
+    "default": false,
+    "description": "Wide review management"
+  },
+  {
+    "name": "wr:resolved-partial",
+    "color": "ff370a",
+    "default": false,
+    "description": "Wide review management"
+  },
+  {
+    "name": "wr:response-drafted",
+    "color": "efbfff",
+    "default": false,
+    "description": "Wide review management"
+  },
+  {
+    "name": "wr:response-sent",
+    "color": "24039b",
+    "default": false,
+    "description": "Wide review management"
+  },
+  {
+    "name": "wr:spec-updated",
+    "color": "2add6c",
+    "default": false,
+    "description": "Wide review management"
+  },
+  {
+    "name": "wr:spec-updated-partial",
+    "color": "db13a9",
+    "default": false,
+    "description": "Wide review management"
   }
 ]
