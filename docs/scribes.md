@@ -36,8 +36,8 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Pellissier Tanon, Thomas  4x
 - Seaborne, Andy  15x
 - Taelman, Ruben  5x
-- Thibodeau, Ted  5x
-- Williams, Gregory  6x
+- Thibodeau, Ted  6x
+- Williams, Gregory  7x
 - Zimmermann, Antoine  5x
 - Bremer, Erich 4x
 - Raggett, Dave 3x
