@@ -6,9 +6,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 
 (scribing counters calculated from minutes)
 
-- Bremer, Erich
 - Gschwend, Adrian
-- Champin, Pierre-Antoine
 - Kellogg, Gregg
 - Pellissier Tanon, Thomas
 - Patel-Schneider, Peter
@@ -22,11 +20,13 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Seaborne, Andy
 - Thibodeau, Ted
 - Williams, Gregory
+- Bremer, Erich
+- Champin, Pierre-Antoine
 
 ## Already scribed 
 - Alexiev, Vladimir  1x
 - Arndt, Dörthe  7x
-- Champin, Pierre-Antoine  22x
+- Champin, Pierre-Antoine  23x
 - Gschwend, Adrian  14x
 - Hartig, Olaf  8x
 - Haudebourg, Timothée  3x
@@ -39,7 +39,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Thibodeau, Ted  6x
 - Williams, Gregory  7x
 - Zimmermann, Antoine  5x
-- Bremer, Erich 4x
+- Bremer, Erich 5x
 - Raggett, Dave 3x
 - Lindstroom, Niklas 4x
 - Lörtsch, Thomas 4x
