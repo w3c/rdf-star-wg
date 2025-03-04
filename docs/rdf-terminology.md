@@ -134,3 +134,11 @@
 * [Valid](https://w3c.github.io/rdf-semantics/spec/#dfn-valid) — Any process which constructs a graph E from some other graph S is (simply) valid if S [simply entails](https://w3c.github.io/rdf-semantics/spec/#dfn-simply-entail) E in every case, otherwise invalid.
 * [Value space](https://w3c.github.io/rdf-semantics/spec/#dfn-value-space) — The value space of a datatype is the range of the [lexical-to-value mapping](https://w3c.github.io/rdf-concepts/spec/#dfn-lexical-to-value-mapping).
 * [Vocabulary](https://w3c.github.io/rdf-semantics/spec/#dfn-vocabulary) — A vocabulary is a set of [names](https://w3c.github.io/rdf-semantics/spec/#dfn-name).
+
+## New terms:
+
+* [Opaque semantics](/docs/semantics.md#opaque-semantics) – Any semantics for quoted triples where the syntactic form of the arguments to quoted triples is important.
+
+* [Semi-transparent semantics](/docs/semantics.md#semi-transparent-semantics) – Any semantics for quoted triples where the syntactic form of some, but not all, kinds of arguments to quoted triples is important _usually excepting blank nodes so that only their meaning (and not their syntactic form) is important_.
+
+* [Transparent semantics](/docs/semantics.md#transparent-semantics) – Any semantics for quoted triples where only the meaning of the arguments to quoted triples is important.
