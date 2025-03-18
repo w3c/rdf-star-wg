@@ -38,9 +38,9 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Taelman, Ruben  5x
 - Thibodeau, Ted  6x
 - Williams, Gregory  7x
-- Zimmermann, Antoine  5x
+- Zimmermann, Antoine  6x
 - Bremer, Erich 5x
-- Raggett, Dave 3x
+- Raggett, Dave 4x
 - Lindstroom, Niklas 4x
 - Lörtsch, Thomas 4x
 - Sasaki, Felix 2x
