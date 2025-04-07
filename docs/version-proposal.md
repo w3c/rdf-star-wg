@@ -8,10 +8,12 @@ and version parameters for HTTP requests and responses.
 The main purpose of this directive is to let parsers only supporting 1.1 quickly error while keeping all existing media types,
 and offers an upgrade path for future RDF/SPARQL versions.
 
+Points in this proposal where contradicting opinions and/or require consensus were raised are marked in **bold**.
+
 ## Version directive
 
 A new version directive can be added for all RDF and SPARQL results syntaxes to specify the processing mode.
-All RDF 1.2 and SPARQL 1.2 result documents SHOULD (or MUST?) include it.
+All RDF 1.2 and SPARQL 1.2 result documents that include 1.2 features SHOULD (**or MUST?**) include it.
 
 If set to `1.2`, the document MAY use 1.2-only features, such as base direction and triple terms.
 1.1-only parsers will crash on this due to the unsupported version construct.
@@ -19,7 +21,7 @@ If set to `1.2`, the document MAY use 1.2-only features, such as base direction 
 If [naming RDF 1.2 without triple terms](https://github.com/w3c/rdf-star-wg/issues/135) is desired,
 the version value `1.2-basic` can be used.
 
-We do not define `1.1` and `1.0` as valid version values, since this directive did not exist yet in 1.1 and below.
+`1.1` may be used as version value, to indicate that literals with datatypes occur, which did not exist yet in 1.0. (Since we can not change the 1.1 specs, this is a mode we introduce as part of the RDF/SPARQL 1.2 specs)
 
 ## Response parameter
 
@@ -48,7 +50,7 @@ Accept: text/turtle; version=1.2
 A version can be defined inline with a version directive, or via the `Content-Type` header.
 If both are defined, they MUST be equal.
 
-Some options that are possible if the version was not defined inline and via `Content-Type`:
+**Some options that are possible if the version was not defined inline and via `Content-Type`:**
 1. A version MUST be set in RDF/SPARQL 1.2. Documents without it will be considered 1.1. Parsers MAY error if they encounter 1.2 features without the version being set to 1.2.
 2. A version SHOULD be set in RDF/SPARQL 1.2. If no version is set, it is up to the parser to choose the behaviour. For example, parsers may fallback to 1.1 parsing, or it can default to the latest version (1.2).
 
@@ -57,9 +59,9 @@ Some options that are possible if the version was not defined inline and via `Co
 ### Turtle, TriG
 
 A similar directive to `PREFIX` and `BASE` can be introduced, which takes `1.2` as value.
-This directive can be defined anywhere in the document.
+This directive SHOULD be defined in the document before a 1.2 feature is encountered.
 
-It MAY be defined multiple times.
+It MAY be defined multiple times. (**Alternatively, it can be handled like BASE, where the version applies to everything below unless overridden later.**)
 If different values are set for these multiple occurrences, the highest value is taken must be considered by the parser. (this is important for parsing of N-Triples/Quads where parsing of chunks can happen in parallel)
 
 ```text
@@ -70,17 +72,16 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 Optional shorthand: `VERSION 1.2`
 
-`@version` may be used instead of `@VERSION`.
+`@version` may be used instead of `VERSION`.
 
 ### N-Triples, N-Quads
 
 These are a bit annoying, every line (except for empty lines, optionally with comments) is supposed to represent a triple.
 
-For this, I see 3 options:
+For this, I see **2 options**:
 
 1. Include a `VERSION` directive like Turtle and TriG, with a slight increase in complexity for parsers.
-2. Represent the version in a comment.
-3. Don't do versioning in N-Triples and N-Quads (and only rely on the optional version parameter in the HTTP response header).
+2. Don't do versioning in N-Triples and N-Quads (and only rely on the optional version parameter in the HTTP response header).
 
 ### RDF/XML
 
@@ -127,6 +128,4 @@ For these, I think we can only rely on the optional version parameter in the HTT
 
 ### SPARQL
 
-The `VERSION` (and `@version`) directive could be used in SPARQL queries as well.
-
-
+The `VERSION` directive could be used in SPARQL queries as well.
