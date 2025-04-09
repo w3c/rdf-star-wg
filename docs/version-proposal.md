@@ -21,7 +21,7 @@ If set to `1.2`, the document MAY use 1.2-only features, such as base direction 
 If [naming RDF 1.2 without triple terms](https://github.com/w3c/rdf-star-wg/issues/135) is desired,
 the version value `1.2-basic` can be used.
 
-`1.1` may be used as version value, to indicate that literals with datatypes occur, which did not exist yet in 1.0. (Since we can not change the 1.1 specs, this is a mode we introduce as part of the RDF/SPARQL 1.2 specs)
+`1.1` may be used as version value, to indicate that literals with datatypes occur, which did not exist yet in 1.0. (Since we can not change the 1.1 specs, this is a mode we introduce as part of the RDF/SPARQL 1.2 specs) (Problem: Existing 1.1-only parsers will crash on this directive, since it did not exist yet when the 1.1 spec was released.)
 
 ## Response parameter
 
