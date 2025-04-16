@@ -6,8 +6,6 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 
 (scribing counters calculated from minutes)
 
-
-- Seaborne, Andy
 - Thibodeau, Ted
 - Williams, Gregory
 - Bremer, Erich
@@ -23,6 +21,8 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Arndt, Dörthe
 - Lindstroom, Niklas
 - Lörtsch, Thomas
+- Seaborne, Andy
+
 
 ## Already scribed 
 - Alexiev, Vladimir  1x
@@ -35,7 +35,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Lassila, Ora  2x
 - Patel-Schneider, Peter  10x
 - Pellissier Tanon, Thomas  5x
-- Seaborne, Andy  15x
+- Seaborne, Andy  16x
 - Taelman, Ruben  5x
 - Thibodeau, Ted  6x
 - Williams, Gregory  7x
