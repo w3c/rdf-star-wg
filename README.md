@@ -1,7 +1,7 @@
 
-# RDF-star Working Group
+# RDF & SPARQL Working Group
 
-This is the main repository of the [RDF-star working group](https://www.w3.org/groups/wg/rdf-star/). See:
+This is the main repository of the [RDF & SPARQL working group](https://www.w3.org/groups/wg/rdf-star/). See:
 - [Participants](https://www.w3.org/groups/wg/rdf-star/participants),
 - [Charter](https://www.w3.org/2022/08/rdf-star-wg-charter/)
 - [Tools](https://www.w3.org/groups/wg/rdf-star/tools) (mailing lists and repositories)
@@ -27,7 +27,7 @@ Additional notes that are pertinent to Working Group discussions may be found in
 
 ## Approximate WG Process Flow
 
-1. Create [Issue](https://github.com/w3c/rdf-star-wg/issues/) asking question, pointing to problem, etc., with title and initial post as neutral as possible regarding (direction of) resolution. Raise general concerns on [RDF-star WG repo](https://github.com/w3c/rdf-star-wg/); raise doc-specific concerns on specific [relevant repo(s)](https://www.w3.org/groups/wg/rdf-star/tools).
+1. Create [Issue](https://github.com/w3c/rdf-star-wg/issues/) asking question, pointing to problem, etc., with title and initial post as neutral as possible regarding (direction of) resolution. Raise general concerns on [RDF & SPARQL WG repo](https://github.com/w3c/rdf-star-wg/); raise doc-specific concerns on specific [relevant repo(s)](https://www.w3.org/groups/wg/rdf-star/tools).
 
 1. Discuss in [Issue](https://github.com/w3c/rdf-star-wg/issues/) and/or on [mailing list](https://lists.w3.org/Archives/Public/public-rdf-star-wg/) and/or in [telecons](https://www.w3.org/groups/wg/rdf-star/calendar)
 

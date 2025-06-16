@@ -108,7 +108,7 @@ defines each occurrence, like so:
 ```
 The triple term `<< :s :p :o >> ` here is not an implicitly named occurrence but a type, similar to 
 how it's defined in the RDF-star CG report.
-The property `rdf-star:occurrenceOf` is just a placeholder. As discussed above, RDF-star will probably
+The property `rdf-star:occurrenceOf` is just a placeholder. As discussed above, RDF 1.2 will probably
 have to provide different properties for different semantics: asserted or not, referentially transparent
 or opaque. However, there can be only one property to map the annotation syntax to triples, and that has
 to express assertedness and referential transparency of the occurrence, just like the semantics of RDF 
@@ -168,7 +168,7 @@ the annotation syntax. Proper extensions to that effect may be defined.
 Of course getting rid of the RDF standard reification quad was *the* motivation for the RDF-star effort. 
 However, it requires a considerable extension to the core of RDF and is still struggling in a lot
 of crucial details. I propose therefore to make it a semantic extension to RDF - endorsed by this WG,
-but still separate and optional. A store deciding to support RDF-star would be welcome to map the 
+but still separate and optional. A store deciding to support RDF 1.2 would be welcome to map the 
 annotation syntax to triple terms, not to standard reification quads. 
 
 This arrangement has several benefits:

@@ -155,7 +155,7 @@ ReSpec has special treatment for an element with `id` `gh-contributors`, which i
     <span id="gh-contributors"></span>
   </p>
 
-  <p>In addition to the <a href="https://www.w3.org/groups/wg/rdf-star/participants">members of the RDF-star Working Group</a>.</p>
+  <p>In addition to the <a href="https://www.w3.org/groups/wg/rdf-star/participants">members of the RDF &amp; SPARQL Working Group</a>.</p>
 </section>
 ```
 
