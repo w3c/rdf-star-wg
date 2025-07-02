@@ -7,9 +7,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 (scribing counters calculated from minutes)
 
 - Sasaki, Felix
-- Hartig, Olaf
 - Raggett, Dave
-- Zimmermann, Antoine
 - Arndt, Dörthe
 - Lindstroom, Niklas
 - Lörtsch, Thomas
@@ -22,13 +20,16 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Kellogg, Gregg
 - Patel-Schneider, Peter
 - Pellissier Tanon, Thomas
+- Hartig, Olaf
+- Zimmermann, Antoine
+
 
 ## Already scribed 
 - Alexiev, Vladimir  1x
 - Arndt, Dörthe  8x
 - Champin, Pierre-Antoine  24x
 - Gschwend, Adrian  16x
-- Hartig, Olaf  9x
+- Hartig, Olaf  10x
 - Haudebourg, Timothée  3x
 - Kellogg, Gregg  19x
 - Lassila, Ora  2x
@@ -38,7 +39,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Taelman, Ruben  5x
 - Thibodeau, Ted  7x
 - Williams, Gregory  8x
-- Zimmermann, Antoine  6x
+- Zimmermann, Antoine  7x
 - Bremer, Erich 6x
 - Raggett, Dave 4x
 - Lindstroom, Niklas 5x
