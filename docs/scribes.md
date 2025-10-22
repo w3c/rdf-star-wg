@@ -6,7 +6,6 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 
 (scribing counters calculated from minutes)
 
-- Raggett, Dave
 - Arndt, Dörthe
 - Lindstroom, Niklas
 - Seaborne, Andy
@@ -20,6 +19,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Sasaki, Felix
 - Zimmermann, Antoine
 - Lörtsch, Thomas
+- Raggett, Dave
 
 
 ## Already scribed 
@@ -39,7 +39,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Williams, Gregory  9x
 - Zimmermann, Antoine  8x
 - Bremer, Erich 6x
-- Raggett, Dave 5x
+- Raggett, Dave 6x
 - Lindstroom, Niklas 6x
 - Lörtsch, Thomas 7x
 - Sasaki, Felix 4x
