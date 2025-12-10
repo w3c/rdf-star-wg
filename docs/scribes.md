@@ -20,6 +20,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Gschwend, Adrian
 - Champin, Pierre-Antoine
 - Williams, Gregory
+- Bolleman, Jerven
 
 ## Already scribed 
 - Alexiev, Vladimir  1x
@@ -42,6 +43,8 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Lindstroom, Niklas 7x
 - Lörtsch, Thomas 7x
 - Sasaki, Felix 4x
+- Bolleman, Jerven 1x
+
 
 
 ## Exempt
