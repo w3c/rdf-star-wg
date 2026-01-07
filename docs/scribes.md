@@ -8,7 +8,6 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 
 - Thibodeau, Ted
 - Pellissier Tanon, Thomas
-- Hartig, Olaf
 - Sasaki, Felix
 - Zimmermann, Antoine
 - Lörtsch, Thomas
@@ -21,13 +20,14 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Williams, Gregory
 - Bolleman, Jerven
 - Patel-Schneider, Peter
+- Hartig, Olaf
 
 ## Already scribed 
 - Alexiev, Vladimir  1x
 - Arndt, Dörthe  11x
 - Champin, Pierre-Antoine  25x
 - Gschwend, Adrian  18x
-- Hartig, Olaf  11x
+- Hartig, Olaf  12x
 - Haudebourg, Timothée  3x
 - Kellogg, Gregg  19x
 - Lassila, Ora  2x
