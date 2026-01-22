@@ -6,7 +6,6 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 
 (scribing counters calculated from minutes)
 
-- Thibodeau, Ted
 - Zimmermann, Antoine
 - Lörtsch, Thomas
 - Raggett, Dave
@@ -57,6 +56,8 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Lassila, Ora
 - Bremer, Erich (can no longer join)
 - Kellogg, Gregg
+- Thibodeau, Ted
+
 
 ## Never seen in meetings
 - Arenas-Guerrero, Julián  
