@@ -6,7 +6,6 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 
 (scribing counters calculated from minutes)
 
-- Zimmermann, Antoine
 - Lörtsch, Thomas
 - Raggett, Dave
 - Arndt, Dörthe
@@ -20,6 +19,8 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Hartig, Olaf
 - Pellissier Tanon, Thomas
 - Sasaki, Felix
+- Zimmermann, Antoine
+
 
 ## Already scribed 
 - Alexiev, Vladimir  1x
@@ -36,7 +37,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Taelman, Ruben  5x
 - Thibodeau, Ted  8x
 - Williams, Gregory  10x
-- Zimmermann, Antoine  8x
+- Zimmermann, Antoine  9x
 - Bremer, Erich 6x
 - Raggett, Dave 6x
 - Lindstroom, Niklas 7x
