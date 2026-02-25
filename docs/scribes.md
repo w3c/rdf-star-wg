@@ -6,7 +6,6 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 
 (scribing counters calculated from minutes)
 
-- Arndt, Dörthe
 - Seaborne, Andy
 - Lindstroom, Niklas
 - Gschwend, Adrian
@@ -20,10 +19,11 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Zimmermann, Antoine
 - Lörtsch, Thomas
 - Raggett, Dave
+- Arndt, Dörthe
 
 ## Already scribed 
 - Alexiev, Vladimir  1x
-- Arndt, Dörthe  11x
+- Arndt, Dörthe  12x
 - Champin, Pierre-Antoine  25x
 - Gschwend, Adrian  18x
 - Hartig, Olaf  12x
