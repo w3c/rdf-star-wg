@@ -17,9 +17,9 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Lörtsch, Thomas
 - Raggett, Dave
 - Arndt, Dörthe
-- Seaborne, Andy
 - Lindstroom, Niklas
 - Gschwend, Adrian
+- Seaborne, Andy
 
 
 ## Already scribed 
@@ -33,7 +33,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Lassila, Ora  2x
 - Patel-Schneider, Peter  13x
 - Pellissier Tanon, Thomas  8x
-- Seaborne, Andy  19x
+- Seaborne, Andy  20x
 - Taelman, Ruben  5x
 - Thibodeau, Ted  8x
 - Williams, Gregory  10x
