@@ -6,7 +6,6 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 
 (scribing counters calculated from minutes)
 
-- Champin, Pierre-Antoine
 - Williams, Gregory
 - Bolleman, Jerven
 - Patel-Schneider, Peter
@@ -20,12 +19,13 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Lindstroom, Niklas
 - Gschwend, Adrian
 - Seaborne, Andy
+- Champin, Pierre-Antoine
 
 
 ## Already scribed 
 - Alexiev, Vladimir  1x
 - Arndt, Dörthe  12x
-- Champin, Pierre-Antoine  25x
+- Champin, Pierre-Antoine  26x
 - Gschwend, Adrian  19x
 - Hartig, Olaf  12x
 - Haudebourg, Timothée  3x
