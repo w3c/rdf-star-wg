@@ -8,7 +8,6 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 
 - Williams, Gregory
 - Taelman, Ruben
-- Champin, Pierre-Antoine
 - Patel-Schneider, Peter
 - Bolleman, Jerven
 - Hartig, Olaf
@@ -16,18 +15,18 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Sasaki, Felix
 - Pellissier Tanon, Thomas
 - Zimmermann, Antoine
-- Gschwend, Adrian
 - Arndt, Dörthe
 - Lindstroom, Niklas
 - Raggett, Dave
 - Seaborne, Andy
-
+- Champin, Pierre-Antoine
+- Gschwend, Adrian
 
 ## Already scribed 
 - Alexiev, Vladimir  1x
 - Arndt, Dörthe  14x
-- Champin, Pierre-Antoine  27x
-- Gschwend, Adrian  21x
+- Champin, Pierre-Antoine  28x
+- Gschwend, Adrian  22x
 - Hartig, Olaf  14x
 - Haudebourg, Timothée  3x
 - Kellogg, Gregg  19x
