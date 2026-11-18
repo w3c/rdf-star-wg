@@ -7,7 +7,6 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 (scribing counters calculated from minutes)
 
 - Taelman, Ruben
-- Patel-Schneider, Peter
 - Bolleman, Jerven
 - Lörtsch, Thomas
 - Sasaki, Felix
@@ -21,6 +20,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Gschwend, Adrian
 - Hartig, Olaf
 - Williams, Gregory
+- Patel-Schneider, Peter
 
 ## Already scribed 
 - Alexiev, Vladimir  1x
@@ -31,7 +31,7 @@ Scribing in WG calls happens as per the list below: We always pick the first per
 - Haudebourg, Timothée  3x
 - Kellogg, Gregg  19x
 - Lassila, Ora  2x
-- Patel-Schneider, Peter  15x
+- Patel-Schneider, Peter  16x
 - Pellissier Tanon, Thomas  10x
 - Seaborne, Andy  22x
 - Taelman, Ruben  7x
